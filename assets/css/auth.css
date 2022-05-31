@@ -61,12 +61,6 @@ input {
     outline: none;
 
 }
-.underline-title{
-    background: -webkit-linear-gradient(right, #2B8B85;, #2B8B85;);
-    height: 2px;
-    margin: 5% auto;
-    width: 89px;
-}
 
 #submit-btn {
     background: #2B8B85;
@@ -83,7 +77,6 @@ input {
     box-shadow: 0px 1px 18px #2B8B85;
 }
 
-
 @media only screen and (max-width: 760px){
     body{
         margin: 5% auto;
@@ -96,6 +89,17 @@ input {
         width: 90%;
     }
     #submit-btn{
-        width: 100%;
+        width: 90%;
     }
+}
+
+@media only screen and (max-width: 1100px){
+
+    input{
+        width: 90%;
+    }
+    #submit-btn{
+        width: 90%;
+    }
+
 }
