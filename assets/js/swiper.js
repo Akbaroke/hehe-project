@@ -15,12 +15,3 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
-
-
-
-
-// <!-- Add Pagination -->
-// <div class="item_pagination swiper-pagination"></div>
-// <!-- Add Arrows -->
-// <div class="next-arrow"><i class="fa-solid fa-caret-right"></i></div>
-// <div class="back-arrow"><i class="fa-solid fa-caret-left"></i></div>

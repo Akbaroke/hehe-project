@@ -7,6 +7,7 @@
     --warna3 : #fff;
     --warna4 : #084642;
     --warna5 : #99C7C4;
+    --warna6 : #FF1E00;
 }
 
 * {
@@ -17,7 +18,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     background-color: var(--warna2);
 }
 
@@ -37,8 +37,9 @@ ul {
 /* Navbar */
 #nav {
     position: fixed;
-    width: 100%;
-    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: var(--warna1);
     overflow: hidden;
     z-index: 999999;
@@ -47,7 +48,7 @@ ul {
 .nav {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 70px;
     justify-content: center;
     gap: 80px;
     padding: 0 50px;
@@ -159,4 +160,71 @@ ul {
 .swiper .swiper-pagination-bullet-active{
     background: var(--warna3);
     opacity: 0.7;
+}
+
+
+/* Produk Section */
+#produk-terbaru,
+#produk-terlaris{
+    display: flex;
+    justify-content: center;
+}
+.produk-container{
+    margin: 50px 0;
+    width: 1131px;
+    min-height: 951px;
+}
+
+.produk-container > h1{
+    font-size: 22px;
+    color: var(--warna4);
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.produk-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+.produk-box{
+    display: flex;
+    width: 270px;
+    height: 445px;
+    background-color: var(--warna3);
+    border-radius: 15px;
+    box-shadow: -5px 4px 6px #00000020;
+}
+.produk-box a div{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.produk-box a div img {
+    width: 270px;
+    height: 270px;
+    border-radius: 10px 10px 0 0;
+}
+.produk-box .ket{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.produk-box .ket h2 {
+    font-size: 18px;
+    color: var(--warna1);
+    margin-bottom: 10px;
+}
+.produk-box .ket h3 {
+    font-size: 20px;
+    color: var(--warna6);
+    margin-bottom: 10px;
+}
+.produk-box .ket div {
+    display: flex;
+    width: 100%;
+    gap: 3px;
+}
+.produk-box .ket div i{
+    color: var(--warna1);
 }
