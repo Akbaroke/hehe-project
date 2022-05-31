@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 
 :root {
@@ -228,4 +229,110 @@ ul {
 .produk-box .ket div i{
     color: var(--warna1);
     font-size: 12px;
+}
+
+
+/* footer section */
+#footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    min-height: 450px;
+    background-color: var(--warna3);
+    border-top: 10px solid var(--warna4);
+}
+.footer-container{
+    width: 1131px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15%;
+    padding: 50px;
+    margin: 0 auto;
+}
+.link1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.box-footer{
+    width: 250px;
+}
+.box-footer h2{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--warna4);
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.box-footer div{
+    padding: 10px;
+}
+.box-footer div a{
+    color: var(--warna1);
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+.box-footer div a i{
+    padding: 8px;
+    font-size: 14px;
+}
+.ikut-box{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.ikut-box div{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.ikut-box div:nth-child(1){
+    background: #3C5A99;
+}
+.ikut-box div:nth-child(2){
+    background: #00ACED;
+}
+.ikut-box div:nth-child(3){
+    background: transparent linear-gradient(158deg, #4365c9 0%, #9a3bb0 20%, #ec4a62 51%, #ffd253 100%) 0% 0% no-repeat padding-box;;
+}
+.ikut-box div:nth-child(4){
+    background: #65BC54;
+}
+.ikut-box div a i{
+    color: var(--warna3);
+    font-size: 25px;
+}
+
+
+/* footer */
+footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--warna4);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+footer div{
+    display: flex;
+    margin: auto;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    background-color: var(--warna1);
+    border-radius: 50px;
+}
+footer div h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin: auto;
+    letter-spacing: 0.5px;
+    color: var(--warna3);
 }
