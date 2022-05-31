@@ -3,6 +3,12 @@
 h2{
     text-align: center;
 }
+.underline-title {
+    background: #2B8B85;
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
 a{
     text-decoration: none;
     color:#084642;
@@ -19,7 +25,7 @@ body{
 
 .card {
     background-color: #fff;
-    margin: 4% auto;
+    margin: 2% auto;
     width: 70%;
     position: relative;
     box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
