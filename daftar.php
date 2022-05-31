@@ -11,13 +11,19 @@
   <div class="card">
     <div id="card-content">
       
-      <form method="post" class="form">
+      <form action="config/auth.php" method="post" class="form">
 
         <h2>DAFTAR</h2>
         <div class="underline-title"></div><br>
-        <input id="user-email" placeholder="Email" class="form-content" type="email" name="email" autocomplete="on" required />
 
         <input id="user-email" placeholder="Nama" class="form-content" type="text" name="nama" required />
+
+        <input id="user-email" placeholder="Email" class="form-content" type="email" name="email" autocomplete="on" required />
+
+
+        <input id="user-email" type="number" class="form-content" required="required" name="hp" placeholder="Masukkan nomor HP/Whatsapp ..">
+
+        <input id="user-email" type="text" class="input" required="required" name="alamat" placeholder="Masukkan alamat lengkap ..">
 
         <input id="user-password" placeholder="Password" class="form-content" type="password" name="password" required />
 
