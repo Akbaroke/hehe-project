@@ -21,7 +21,7 @@ body{
     margin: 2% auto;
     width: 70%;
     position: relative;
-    box-shadow: 0 5px 8px 0 #EEEEEE, 0 6px 20px 0 #EEEEEE;
+    box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
     padding: 1.5rem !important;
     border-radius: 10px;
     word-break: break-word;
@@ -42,7 +42,7 @@ label{
     font-size: 11pt;
 }
 
-input {
+#user-email, #user-password {
     border: 1px solid #2B8B85;
     margin: 1% auto;
     border-radius: 20px;
@@ -85,7 +85,7 @@ input {
     .card{
         width: 90%;
     }
-    input{
+    #user-email, #user-password{
         width: 90%;
     }
     #submit-btn{
@@ -95,7 +95,7 @@ input {
 
 @media only screen and (max-width: 1100px){
 
-    input{
+    #user-email, #user-password{
         width: 90%;
     }
     #submit-btn{
