@@ -1,5 +1,10 @@
 
-
+<?php
+   session_start();
+   if(isset($_SESSION['email'])) {
+   header('location:halo/index.php'); }
+   require_once("config/koneksi.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>

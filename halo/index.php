@@ -8,15 +8,15 @@ $file = basename($_SERVER["PHP_SELF"]);
 
 if (!isset($_SESSION["customer_status"])) {
     // halaman yg dilindungi jika customer belum login
-    $lindungi = ["halo/index.php", "../customer_logout.php"];
+    $lindungi = ["index.php", "../customer_logout.php"];
 
     // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
-        header("location:../index.php");
+        header("location:../login.php");
     }
 
     if ($file == "checkout.php") {
-        header("location:login.php?alert=login-dulu");
+        header("location:../login.php?alert=login-dulu");
     }
 } else {
     // halaman yg tidak boleh diakses jika customer sudah login
@@ -24,7 +24,7 @@ if (!isset($_SESSION["customer_status"])) {
 
     // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
-        header("location:halo/index.php");
+        header("location:index.php");
     }
 }
 

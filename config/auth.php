@@ -16,3 +16,4 @@ if(mysqli_num_rows($cek_email) > 0){
 	mysqli_query($koneksi, "insert into customer values (NULL,'$nama','$email','$hp','$alamat','$password')");
 	header("location:../login.php?alert=terdaftar");
 }
+?>
