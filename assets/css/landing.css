@@ -6,6 +6,7 @@
     --warna2 : #F8F8F8;
     --warna3 : #fff;
     --warna4 : #084642;
+    --warna5 : #99C7C4;
 }
 
 * {
@@ -134,7 +135,7 @@ ul {
     margin-top: 70px;
     width: 100%;
     min-height: 100%;
-    background: var(--warna3);
+    background: var(--warna5);
     display: flex;
     justify-content: center;
     align-items: center;
