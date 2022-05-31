@@ -18,7 +18,8 @@ body{
 }
 
 .card {
-    margin: 2% auto;
+    background-color: #fff;
+    margin: 4% auto;
     width: 70%;
     position: relative;
     box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
@@ -38,9 +39,6 @@ body{
     flex-direction: column;
     margin: 5% auto;
 }
-label{
-    font-size: 11pt;
-}
 
 #user-email, #user-password {
     border: 1px solid #2B8B85;
@@ -49,7 +47,7 @@ label{
     font-size: 1rem;
     color: #656880;
     height: 29px;
-    width: 720px;
+    width: 520px;
     padding-left: 20px;
 }
 
@@ -65,16 +63,20 @@ label{
 #submit-btn {
     background: #2B8B85;
     border: none;
-    border-radius: 21px;
+    border-radius: 20px;
     cursor: pointer;
     color: white;
-    font-size: 15px;
+    font-size: 1rem;
     height: 42.3px;
     margin: 1% auto;
-    width: 720px;
+    width: 542px;
 }
 #submit-btn:hover {
     box-shadow: 0px 1px 18px #2B8B85;
+}
+
+small{
+    text-align: center;
 }
 
 @media only screen and (max-width: 760px){
@@ -89,7 +91,10 @@ label{
         width: 90%;
     }
     #submit-btn{
-        width: 90%;
+        width: 95%;
+    }
+    small{
+        font-size: 9pt;
     }
 }
 
