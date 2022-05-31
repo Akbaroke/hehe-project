@@ -153,8 +153,9 @@ ul {
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next{
     color: var(--warna3);
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .swiper .swiper-pagination-bullet-active{
     background: var(--warna3);
 }
+
