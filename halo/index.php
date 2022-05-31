@@ -1,5 +1,5 @@
 <?php
-include "config/koneksi.php";
+include "../config/koneksi.php";
 
 session_start();
 
@@ -7,11 +7,11 @@ $file = basename($_SERVER["PHP_SELF"]);
 
 if (!isset($_SESSION["customer_status"])) {
     // halaman yg dilindungi jika customer belum login
-    $lindungi = ["halo.php", "customer_logout.php"];
+    $lindungi = ["halo/index.php", "../customer_logout.php"];
 
     // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
-        header("location:index.php");
+        header("location:../index.php");
     }
 
     if ($file == "checkout.php") {
@@ -19,11 +19,11 @@ if (!isset($_SESSION["customer_status"])) {
     }
 } else {
     // halaman yg tidak boleh diakses jika customer sudah login
-    $lindungi = ["login.php", "daftar.php"];
+    $lindungi = ["../login.php", "../daftar.php"];
 
     // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
-        header("location:halo.php");
+        header("location:halo/index.php");
     }
 }
 
@@ -71,7 +71,7 @@ if ($file == "checkout.php") {
 	</tbody>
 </table>
 
-
+<a href="../customer-logout.php">Logout</a>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
-<?php 
+<?php
+// menghubungkan dengan koneksi
+include 'koneksi.php'; 
 // Login
 $email = $_POST['email'];
 $password = md5($_POST['password']);
@@ -19,7 +21,7 @@ if($cek > 0){
 	// buat session customer
 	$_SESSION['customer_id'] = $data['customer_id'];
 	$_SESSION['customer_status'] = "login";
-	header("location:../halo.php");
+	header("location:../halo/index.php");
 }else{
 	header("location:../login.php?alert=gagal");
 }
