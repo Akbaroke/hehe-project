@@ -46,22 +46,11 @@ if ($file == "checkout.php") {
     }
 }
 ?>
-<!-- BREADCRUMB -->
-<div id="breadcrumb">
-	<div class="container">
-		<ul class="breadcrumb">
-			<li><a href="index.php">Home</a></li>
-			<li class="active">Dashboard Customer</li>
-		</ul>
-	</div>
-</div>
-<!-- /BREADCRUMB -->
-
 
 			
-			<?php 
-			include 'customer_sidebar.php'; 
-			?>
+<?php 
+include 'customer_sidebar.php'; 
+?>
 
 <div id="main" class="col-md-9">
 
