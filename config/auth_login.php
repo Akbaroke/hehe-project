@@ -21,7 +21,7 @@ if($cek > 0){
 	// buat session customer
 	$_SESSION['customer_id'] = $data['customer_id'];
 	$_SESSION['customer_status'] = "login";
-	header("location:../halo/index.php");
+	header("location:../halo/");
 }else{
 	header("location:../login.php?alert=gagal");
 }

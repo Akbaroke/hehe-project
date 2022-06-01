@@ -15,17 +15,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <?php 
-          if(isset($_GET['alert'])){
-            if($_GET['alert'] == "terdaftar"){
-              echo "<div class='alert alert-success text-center'>Selamat akun anda telah disimpan, silahkan login.</div>";
-            }elseif($_GET['alert'] == "gagal"){
-              echo "<div class='alert alert-danger text-center'>Email dan Password tidak sesuai, coba lagi.</div>";
-            }elseif($_GET['alert'] == "login-dulu"){
-              echo "<div class='alert alert-warning text-center'>Silahkan login terlebih dulu untuk membuat pesanan.</div>";
-            }
-          }
-          ?>
   <div class="card">
     <div id="card-content">
       <form action="config/auth_login.php" method="post" class="form">
