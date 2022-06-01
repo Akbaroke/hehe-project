@@ -30,7 +30,7 @@
             <div class="tom-container">
                 <a href="#"><div class="tom"><i class="fa-solid fa-heart"></div></i></a>
                 <a href="#"><div class="tom"><i class="fa-solid fa-basket-shopping"></i></div></a>
-                <a href="#"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
+                <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
             </div>
         </nav>
     </section>

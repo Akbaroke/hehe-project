@@ -1,7 +1,8 @@
-<?php
+<?php 
 // menghubungkan dengan koneksi
-include 'koneksi.php'; 
-// Login
+include 'koneksi.php';
+
+// menangkap data yang dikirim dari form
 $email = $_POST['email'];
 $password = md5($_POST['password']);
 
@@ -21,8 +22,7 @@ if($cek > 0){
 	// buat session customer
 	$_SESSION['customer_id'] = $data['customer_id'];
 	$_SESSION['customer_status'] = "login";
-	header("location:../halo/");
+	header("location:../customer/customer.php");
 }else{
 	header("location:../login.php?alert=gagal");
 }
-?>
