@@ -1,7 +1,7 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      Toko Online Penjualan Pakaian Tenun
+      pet
     </div>
     <strong>Copyright &copy; <?php echo date('Y') ?></strong>
   </footer>
