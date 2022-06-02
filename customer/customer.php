@@ -47,6 +47,7 @@ if ($file == "checkout.php") {
 }
 ?>
 
+<a href="../">Home</a>
 			
 <?php 
 include 'customer_sidebar.php'; 
