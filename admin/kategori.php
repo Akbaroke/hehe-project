@@ -13,16 +13,18 @@
     </ol>
   </section>
 
+
+
+
+
   <section class="content">
     <div class="row">
-      <section class="col-lg-8">
+      <section class="col-lg-10 col-lg-offset-1">
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Kategori</h3>
-            <div class="btn-group pull-right">
-              <a href="kategori_tambah.php" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> &nbsp Tambah kategori</a>              
-            </div>
+            <h3 class="box-title">Produk</h3>
+            <a href="produk_tambah.php" class="btn btn-info btn-sm pull-right"><i class="fa fa-plus"></i> &nbsp Tambah Produk Baru</a>              
           </div>
           <div class="box-body">
 
