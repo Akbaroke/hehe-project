@@ -3,11 +3,11 @@
 
 
 :root {
-    --warna1 : #871e5f;
+    --warna1 : #605CA8;
     --warna2 : #F8F8F8;
     --warna3 : #fff;
     --warna4 : #EA8D30;
-    --warna5 : #bf6da0;
+    --warna5 : #a39fdf;
     --warna6 : #FF1E00;
     --warna7 : #111;
 }
@@ -55,6 +55,12 @@ ul {
     gap: 50px;
     padding: 0 50px;
 }
+
+#nav.stiki{
+    box-shadow: 0 5px 10px #00000070;
+}
+
+.nav-mobile{display: none;}
 
 .tom-container{
     display: flex;
@@ -166,13 +172,16 @@ ul {
     .tom-container{
         display: none;
     }
-    .con-ham{
+    .con-ham,.con-close{
         display: flex;
         justify-content: center;
         width: 50px;
         margin: auto 0;
     }
-    .hamburger{
+    .search-container{
+        display: none;
+    }
+    .hamburger,.close{
         display: inline;
         width: 40px;
         height: 40px;
@@ -181,9 +190,29 @@ ul {
         text-align: center;
         border-radius: 50%;
         box-shadow: -5px 4px 6px #00000020;
+        cursor: pointer;
     }
-    .hamburger i{
+    .con-close {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .hamburger i,.close i{
         color: var(--warna4);
+    }
+    .nav-mobile{
+        display: flex;
+        background-color: var(--warna1);
+        width: 70%;
+        transform: translateX(30rem);
+        transition: transform 0.5s cubic-bezier(0.56,0.1,0.34,0.91);
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .active > .nav-mobile{
+        transform: translateX(0);
     }
 }
 @media only screen and (max-width: 430px){
