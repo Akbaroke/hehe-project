@@ -16,7 +16,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example2" class="table table-bordered table-striped">
+                <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>no</th>
@@ -60,8 +60,7 @@
 
  <section class="content-header">
     <h1>
-      Produk
-      <small>Data Produk</small>
+      <small>Tambah/Edit/Hapus</small>
     </h1>
   </section>
 

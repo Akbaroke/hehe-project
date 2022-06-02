@@ -2,33 +2,27 @@
 
 <div class="card-body content-wrapper bg-light">
 
-  <section class="content-header">
-    <h1>
-      Kategori
-      <small>Data Kategori</small>
-    </h1>
-  </section>
 
 
+ <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+           
 
-
-
-  <section class="content">
-    <div class="row">
-      <section class="col-lg-10 col-lg-offset-1">
-        <div class="box box-warning">
-
-          <div class="box-header">
-            <a href="kategori_tambah.php" class="btn btn-warning btn-sm pull-right"><i class="fa fa-plus"></i> &nbsp Tambah Kategori</a>              
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered table-striped" id="table-datatable">
-                <thead>
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Kategori</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
-                    <th width="1%">NO</th>
+                    <th>NO</th>
                     <th>NAMA</th>
-                    <th width="15%">OPSI</th>
+                    <th>OPSI</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -41,26 +35,30 @@
                     <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $d['kategori_nama']; ?></td>
-                      <td>                      
-                        <?php if($d['kategori_id'] != 1){ ?>  
-                          <a class="btn btn-warning btn-sm" href="kategori_edit.php?id=<?php echo $d['kategori_id'] ?>"><i class="fa fa-cog"></i></a>
-                          <a class="btn btn-danger btn-sm" href="kategori_hapus_konfir.php?id=<?php echo $d['kategori_id'] ?>"><i class="fa fa-trash"></i></a>
-                        <?php } ?>
+                      <td>                        
+                        <a class="badge badge-pill badge-warning" href="kategori_edit.php?id=<?php echo $d['produk_id'] ?>"><i class="fa fa-cog"></i> Edit</a>
+
+                        <a class="badge badge-pill badge-danger" href="kategori_hapus_konfir.php?id=<?php echo $d['produk_id'] ?>"><i class="fa fa-trash"> Hapus</i></a>
                       </td>
                     </tr>
                     <?php 
                   }
                   ?>
                 </tbody>
-              </table>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
-
+            <!-- /.card -->
           </div>
-
+          <!-- /.col -->
         </div>
-      </section>
-    </div>
-  </section>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
 
 </div>
 <?php include 'footer.php'; ?>
