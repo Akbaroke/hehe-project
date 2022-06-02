@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-<div class="content-wrapper">
-
+<div class="card-body content-wrapper bg-light">
   <section class="content-header">
     <h1>
       Admin
@@ -19,10 +18,9 @@
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Tambah Admin</h3>
             <a href="admin.php" class="btn btn-info btn-sm pull-right"><i class="fa fa-reply"></i> &nbsp Kembali</a> 
           </div>
-          <div class="box-body">
+          <div class="card-body">
             <form action="admin_act.php" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label>Nama</label>

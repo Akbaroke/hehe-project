@@ -1,16 +1,12 @@
 <?php include 'header.php'; ?>
 
-<div class="content-wrapper">
+<div class="card-body content-wrapper bg-light">
 
   <section class="content-header">
     <h1>
-      Transaksi
+      Transaksi <br>
       <small>Data Transaksi / Pesanan</small>
     </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
-    </ol>
   </section>
 
   <section class="content">
@@ -19,9 +15,9 @@
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Transaksi / Pesanan</h3>
+
           </div>
-          <div class="box-body">
+          <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered table-striped" id="table-datatable">
                 <thead>

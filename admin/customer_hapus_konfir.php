@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-<div class="content-wrapper">
-
+<div class="card-body content-wrapper bg-light">
   <section class="content-header">
     <h1>
       Hapus customer

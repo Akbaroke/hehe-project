@@ -1,7 +1,6 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      pet
     </div>
     <strong>Copyright &copy; <?php echo date('Y') ?></strong>
   </footer>
@@ -10,47 +9,38 @@
 </div>
 
 
-<script src="../assets/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/jquery-ui/jquery-ui.min.js"></script>
-
+<!-- jQuery -->
+<script src="../assets/adminlte/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../assets/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton', $.ui.button);
+  $.widget.bridge('uibutton', $.ui.button)
 </script>
-
-<script src="../assets/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/raphael/raphael.min.js"></script>
-<script src="../assets/adminlte/bower_components/morris.js/morris.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-
-
-<script src="../assets/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../assets/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-
-<script src="../assets/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="../assets/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-
-<script src="../assets/adminlte/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/moment/min/moment.min.js"></script>
-<script src="../assets/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-<script src="../assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-<script src="../assets/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-
-<script src="../assets/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
-
-<script src="../assets/adminlte/dist/js/adminlte.min.js"></script>
-
+<!-- Bootstrap 4 -->
+<script src="../assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../assets/adminlte/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../assets/adminlte/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../assets/adminlte/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../assets/adminlte/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../assets/adminlte/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../assets/adminlte/plugins/moment/moment.min.js"></script>
+<script src="../assets/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../assets/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../assets/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../assets/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../assets/adminlte/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../assets/adminlte/dist/js/pages/dashboard.js"></script>
-
-<script src="../assets/adminlte/dist/js/demo.js"></script>
-<script src="../assets/adminlte/bower_components/ckeditor/ckeditor.js"></script>
 
 </body>
 </html>

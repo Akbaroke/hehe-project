@@ -1,16 +1,12 @@
 <?php include 'header.php'; ?>
 
-<div class="content-wrapper">
+<div class="card-body content-wrapper bg-light">
 
   <section class="content-header">
     <h1>
       Admin
       <small>Data Admin</small>
     </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
-    </ol>
   </section>
 
   <section class="content">
@@ -19,10 +15,9 @@
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Admin</h3>
-            <a href="admin_tambah.php" class="btn btn-info btn-sm pull-right"><i class="fa fa-plus"></i> &nbsp Tambah Admin Baru</a>              
+            <a href="admin_tambah.php" class="btn btn-warning btn-sm pull-right"><i class="fa fa-plus"></i> &nbsp Tambah Admin Baru</a>              
           </div>
-          <div class="box-body">
+          <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered table-striped" id="table-datatable">
                 <thead>
@@ -56,6 +51,7 @@
                       </td>
                       <td>                        
                         <a class="btn btn-warning btn-sm" href="admin_edit.php?id=<?php echo $d['admin_id'] ?>"><i class="fa fa-cog"></i></a>
+
                         <?php if($d['admin_id'] != 1){ ?>
                           <a class="btn btn-danger btn-sm" href="admin_hapus.php?id=<?php echo $d['admin_id'] ?>"><i class="fa fa-trash"></i></a>
                         <?php } ?>
