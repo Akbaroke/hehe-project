@@ -28,11 +28,11 @@
       <?php 
         if(isset($_GET['alert'])){
           if($_GET['alert'] == "gagal"){
-            echo "<div class='alert alert-danger'>Login gagal! username dan password salah!</div>";
+            echo "<div class='alert alert-danger'><center>Login gagal! username dan password salah!</center></div>";
           }else if($_GET['alert'] == "logout"){
-            echo "<div class='alert alert-success'>Anda telah berhasil logout</div>";
+            echo "<div class='alert alert-success'><center>Anda telah berhasil logout</center></div>";
           }else if($_GET['alert'] == "belum_login"){
-            echo "<div class='alert alert-warning'>Anda harus login untuk mengakses halaman admin</div>";
+            echo "<div class='alert alert-warning'><center>Silahkan login untuk mengakses halaman admin<center></div>";
           }
         }
         ?>
