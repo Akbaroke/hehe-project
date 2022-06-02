@@ -45,21 +45,7 @@
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
 
-            <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <?php 
-                $id_admin = $_SESSION['id'];
-                $profil = mysqli_query($koneksi,"select * from admin where admin_id='$id_admin'");
-                $profil = mysqli_fetch_assoc($profil);
-                if($profil['admin_foto'] == ""){ 
-                  ?>
-                  <img src="../gambar/sistem/user.png" class="user-image">
-                <?php }else{ ?>
-                  <img src="../gambar/user/<?php echo $profil['admin_foto'] ?>" class="user-image">
-                <?php } ?>
-                <span class="hidden-xs"><?php echo $_SESSION['nama']; ?> - Admin</span>
-              </a>
-            </li>
+
             <li>
               <a href="logout.php"><i class="fa fa-sign-out"></i> LOGOUT</a>
             </li>
