@@ -16,12 +16,7 @@ a{
 a:hover{
     color: #2B8B85;
 }
-body{
-    margin: 5% auto;
-    background-color: #F8F8F8;
-    color:#084642;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 .card {
     background-color: #fff;
@@ -97,13 +92,7 @@ small{
 }
 
 @media only screen and (max-width: 760px){
-    body{
-        margin: 5% auto;
-        width: 90%;
-    }
-    .card{
-        width: 90%;
-    }
+
     #user-email, #user-password{
         width: 90%;
     }
