@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PETSHOP</title>
-<!-- Google font -->
-<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+<?php include 'header.php'; ?>
 
-<link type="text/css" rel="stylesheet" href="../assets/css/auth.css" />
-</head> 
-<body>
-<?php
-include "../config/koneksi.php";
-
-session_start();
-
-$file = basename($_SERVER["PHP_SELF"]);
-
-if (!isset($_SESSION["customer_status"])) {
-    // halaman yg dilindungi jika customer belum login
-    $lindungi = ["customer.php", "logout.php"];
-
-    // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
-    if (in_array($file, $lindungi)) {
-        header("location:../index.php");
-    }
-
-    if ($file == "checkout.php") {
-        header("location:../login.php?alert=login-dulu");
-    }
-} else {
-    // halaman yg tidak boleh diakses jika customer sudah login
-    $lindungi = ["../login.php", "../daftar.php"];
-
-    // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
-    if (in_array($file, $lindungi)) {
-        header("location:customer.php");
-    }
-}
-
-if ($file == "checkout.php") {
-    if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
-        header("location:keranjang.php?alert=keranjang_kosong");
-    }
-}
-?>
-
-<a href="../">Home</a>
 			
-<?php 
-include 'customer_sidebar.php'; 
-?>
+<?php include 'customer_sidebar.php'; ?>
 
 <div id="main" class="col-md-9">
 
@@ -91,5 +41,4 @@ include 'customer_sidebar.php';
 
 	</div>
 
-</body>
-</html>
+<?php include 'footer.php'; ?>
