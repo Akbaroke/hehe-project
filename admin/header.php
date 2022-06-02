@@ -31,7 +31,7 @@
   ?>
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
@@ -122,11 +122,11 @@
             </a>
           </li>
 
-          <li>
+          <!--li>
             <a href="laporan.php">
               <i class="fa fa-file"></i> <span>LAPORAN PENJUALAN</span>
             </a>
-          </li> 
+          </li--> 
 
           <li>
             <a href="admin.php">
