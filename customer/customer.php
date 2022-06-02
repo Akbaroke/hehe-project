@@ -20,7 +20,7 @@ $file = basename($_SERVER["PHP_SELF"]);
 
 if (!isset($_SESSION["customer_status"])) {
     // halaman yg dilindungi jika customer belum login
-    $lindungi = ["customer.php", "../customer_logout.php"];
+    $lindungi = ["customer.php", "logout.php"];
 
     // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
