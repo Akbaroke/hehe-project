@@ -7,9 +7,9 @@ $foto1 = $d['produk_foto1'];
 $foto2 = $d['produk_foto2'];
 $foto3 = $d['produk_foto3'];
 
-unlink("../gambar/produk/$foto1");
-unlink("../gambar/produk/$foto2");
-unlink("../gambar/produk/$foto3");
+unlink("../assets/img/landing/produk/$foto1");
+unlink("../assets/img/landing/produk/$foto2");
+unlink("../assets/img/landing/produk/$foto3");
 
 mysqli_query($koneksi, "delete from produk where produk_id='$id'");
 

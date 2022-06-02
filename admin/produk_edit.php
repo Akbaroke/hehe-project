@@ -92,7 +92,7 @@
                   <?php if($d['produk_foto1'] == ""){ ?>
                     <img src="../gambar/sistem/produk.png" style="width: 120px;height: auto">
                   <?php }else{ ?>
-                    <img src="../gambar/produk/<?php echo $d['produk_foto1'] ?>" style="width: 120px;height: auto">
+                    <img src="../assets/img/landing/produk/<?php echo $d['produk_foto1'] ?>" style="width: 120px;height: auto">
                   <?php } ?>
 
                   <br/>
@@ -107,7 +107,7 @@
                   <?php if($d['produk_foto2'] == ""){ ?>
                     <img src="../gambar/sistem/produk.png" style="width: 120px;height: auto">
                   <?php }else{ ?>
-                    <img src="../gambar/produk/<?php echo $d['produk_foto2'] ?>" style="width: 120px;height: auto">
+                    <img src="../assets/img/landing/produk/<?php echo $d['produk_foto2'] ?>" style="width: 120px;height: auto">
                   <?php } ?>
 
                   <br/>
@@ -122,7 +122,7 @@
                   <?php if($d['produk_foto3'] == ""){ ?>
                     <img src="../gambar/sistem/produk.png" style="width: 120px;height: auto">
                   <?php }else{ ?>
-                    <img src="../gambar/produk/<?php echo $d['produk_foto3'] ?>" style="width: 120px;height: auto">
+                    <img src="../assets/img/landing/produk/<?php echo $d['produk_foto3'] ?>" style="width: 120px;height: auto">
                   <?php } ?>
 
                   <br/>
