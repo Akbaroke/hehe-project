@@ -19,5 +19,5 @@ if($cek > 0){
 
 	header("location:../admin/");
 }else{
-	header("location:../login/admin.php?alert=gagal");
+	header("location:../admin/login.php?alert=gagal");
 }
