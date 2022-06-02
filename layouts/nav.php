@@ -9,7 +9,7 @@
                 </form>
             </div>
             <div class="tom-container">
-                <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
+                <a href="#"><div class="tom"><i class="fas fa-th"></i></div></a>
                 <a href="#"><div class="tom"><i class="fa-solid fa-basket-shopping"></i></div></a>
                 <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
             </div>
@@ -20,7 +20,7 @@
                 <div class="tom-container-mobile">
                     <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
                     <a href="#"><div class="tom"><i class="fa-solid fa-basket-shopping"></i></div></a>
-                    <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
+                    <a href="#"><div class="tom"><i class="fas fa-th"></i></div></a>
                 </div>
                 <div class="con-close"><div class="close"><i class="fas fa-times"></i></div></div>
                 <div class="search-container-mobile">

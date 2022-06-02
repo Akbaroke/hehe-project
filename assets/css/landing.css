@@ -220,6 +220,7 @@ ul {
         justify-content: flex-start;
         flex-wrap: nowrap;
         margin: auto;
+        padding-top: 50px;
         width: 80%;
         height: 80vh;
         gap: 50px;
