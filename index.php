@@ -79,7 +79,7 @@ include "config/koneksi.php";
                 ?>
                 <div class="produk-box">
                     <a href="#"><div>
-                        <img src="assets/img/landing/produk/<?=$tampil['produk_foto1']?>">
+                        <img src="./assets/img/landing/landing/produk/<?=$tampil['img']?>">
                         <div class="ket">
                             <h2><?=$tampil['produk_nama']?></h2>
                             <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?></h3>
