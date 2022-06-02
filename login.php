@@ -59,12 +59,11 @@ if(isset($_GET['alert'])){
   }
 }
 ?>
-<br>
+
   <div class="card">
     <div id="card-content">
       <form action="config/auth_login.php" method="post" class="form">
       <h2>LOGIN</h2>
-      <div class="underline-title"></div><br>
         
         <input id="user-email" placeholder="Email" class="form-content" type="email" name="email" required="required" />
         

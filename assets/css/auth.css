@@ -3,12 +3,7 @@
 h2{
     text-align: center;
 }
-.underline-title {
-    background: #2B8B85;
-    height: 2px;
-    margin: -1.1rem auto 0 auto;
-    width: 89px;
-  }
+
 a{
     text-decoration: none;
     color:#084642;
@@ -20,7 +15,7 @@ a:hover{
 
 .card {
     background-color: #fff;
-    margin: 2% auto;
+    margin: 9% auto;
     width: 70%;
     position: relative;
     box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
@@ -42,7 +37,7 @@ a:hover{
 }
 
 #user-email, #user-password {
-    border: 1px solid #2B8B85;
+    border: 1px solid #871e5f;
     margin: 1% auto;
     border-radius: 20px;
     font-size: 1rem;
@@ -52,7 +47,7 @@ a:hover{
     padding-left: 20px;
 }
 input:hover{
-    box-shadow: 0px 0px 3px #2B8B85;
+    box-shadow: 0px 0px 3px #871e5f;
 }
 
 
@@ -73,7 +68,7 @@ input:hover{
     width: 542px;
 }
 #submit-btn:hover {
-    box-shadow: 0px 1px 10px #2B8B85;
+    box-shadow: 0px 1px 10px #871e5f;
 }
 
 small{
@@ -92,7 +87,10 @@ small{
 }
 
 @media only screen and (max-width: 760px){
-
+    .card{
+        margin: 20% auto;
+        width: 90%;
+    }
     #user-email, #user-password{
         width: 90%;
     }
