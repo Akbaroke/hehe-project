@@ -83,7 +83,7 @@ if(isset($_GET['alert'])){
             <a style="text-decoration:underline;" href="">Kebijakan Privasi </a>
         </small>
         <small style="text-align:center;">  
-          Sudah punya akun?<a style="text-decoration:underline;" href="login.html"> Masuk</a> 
+          Sudah punya akun?<a style="text-decoration:underline;" href="login"> Masuk</a> 
         </small>
       </form>
     </div>
