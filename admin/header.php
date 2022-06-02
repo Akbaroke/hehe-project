@@ -102,6 +102,12 @@
             </a>
           </li>
 
+          <li>
+            <a href="admin.php">
+              <i class="fa fa-user"></i> <span>DATA ADMIN</span>
+            </a>
+          </li>
+
            <li>
             <a href="transaksi.php">
               <i class="fa fa-retweet"></i> <span>TRANSAKSI / PESANAN</span>
@@ -113,12 +119,6 @@
               <i class="fa fa-file"></i> <span>LAPORAN PENJUALAN</span>
             </a>
           </li--> 
-
-          <li>
-            <a href="admin.php">
-              <i class="fa fa-user"></i> <span>DATA ADMIN</span>
-            </a>
-          </li>
 
           <li>
             <a href="gantipassword.php">

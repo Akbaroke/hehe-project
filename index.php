@@ -10,36 +10,14 @@ include "config/koneksi.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
 
-    <!-- Ajax Swiper Slider -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<?php include 'layouts/header-static.php'; ?>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
-    <!-- My Css -->
-    <link rel="stylesheet" href="assets/css/landing.css">
 
 </head>
 <body>
-    <section id="nav">
-        <nav class="nav">
-            <div class="logo"><a href="index.php"><img src="assets/img/landing/LOGO.png" alt="LOGO"></a></div>
-            <div class="search-container">
-                <form action="" method="get">
-                    <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
-                    <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
-            <div class="tom-container">
-                <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
-                <a href="#"><div class="tom"><i class="fa-solid fa-basket-shopping"></i></div></a>
-                <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
-            </div>
-            <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
-        </nav>
-    </section>
+
+<?php include 'layouts/nav.php'; ?>
+
     <section id="banner">
         <div class="container-slide">
             <!-- Slider main container -->
@@ -94,43 +72,5 @@ include "config/koneksi.php";
             </div>
         </div>
     </section>
-    <section id="footer">
-        <div class="footer-container">
-            <div class="link1">
-                <div class="box-footer">
-                    <h2>Customer Care</h2>
-                    <div><a href="#"><i class="fa-solid fa-phone"></i>08123456789</a></div>
-                    <div><a href="#"><i class="fa-solid fa-envelope"></i>Olshop@gmail.com</a></div>
-                    <div><a href="#"><i class="fa-regular fa-clock"></i>09:00 s/d 17:00</a></div>
-                </div>
-                <div class="box-footer">
-                    <h2>Bantuan</h2>
-                    <div><a href="#">Pusat Edukasi</a></div>
-                    <div><a href="#">Cara Belanja</a></div>
-                    <div><a href="#">Pembayaran</a></div>
-                </div>
-            </div>
-            <div class="link1">
-                <div class="box-footer">
-                    <h2>Info</h2>
-                    <div><a href="#">Pusat Edukasi</a></div>
-                    <div><a href="#">Cara Belanja</a></div>
-                    <div><a href="#">Pembayaran</a></div>
-                </div>
-                <div class="box-footer">
-                    <h2>Ikuti Kami</h2>
-                    <div class="ikut-box">
-                        <div><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-                        <div><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
-                        <div><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-                        <div><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div><h1>@2022 Sandio PetCare</h1></div>
-    </footer>
-</body>
-</html>
+
+<?php include 'layouts/footer.php'; ?>

@@ -45,6 +45,7 @@ if ($file == "checkout.php") {
 </head>
 <body>
 
+<?php include 'layouts/nav.php'; ?>
 
 <?php 
 if(isset($_GET['alert'])){
@@ -77,6 +78,4 @@ if(isset($_GET['alert'])){
       </form>
     </div>
   </div>
-</body>
-
-</html>
+<?php include 'layouts/footer.php'; ?>
