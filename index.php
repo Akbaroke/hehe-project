@@ -1,3 +1,7 @@
+<?php
+include "config/koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +14,30 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
     <!-- My Css -->
     <link rel="stylesheet" href="assets/css/landing.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 <body>
     <section id="nav">
         <nav class="nav">
-            <div class="logo"><a href="#">Olshop.</a></div>
-            <div class="kat">Kategory</div>
+            <div class="logo"><a href="index.php"><img src="assets/img/landing/LOGO.png" alt="LOGO"></a></div>
             <div class="search-container">
-                <input type="text" class="kol-search" placeholder="Cari..." required>
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <form action="" method="get">
+                    <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
+                    <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
             <div class="tom-container">
-                <a href="#"><div class="tom"><i class="fa-solid fa-heart"></div></i></a>
+                <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
                 <a href="#"><div class="tom"><i class="fa-solid fa-basket-shopping"></i></div></a>
                 <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
             </div>
+            <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
         </nav>
     </section>
     <section id="banner">
@@ -41,9 +47,9 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img src="assets/img/landing/banner1.jpg"></div>
-                    <div class="swiper-slide"><img src="assets/img/landing/banner2.jpg"></div>
-                    <div class="swiper-slide"><img src="assets/img/landing/banner3.jpg"></div>
+                    <div class="swiper-slide"><img class="img-slider" src="assets/img/landing/banner1.jpg"></div>
+                    <div class="swiper-slide"><img class="img-slider" src="assets/img/landing/banner2.jpg"></div>
+                    <div class="swiper-slide"><img class="img-slider" src="assets/img/landing/banner3.jpg"></div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -60,189 +66,31 @@
         <div class="produk-container">
             <h1>Produk Terbaru</h1>
             <div class="produk-list">
+                <?php
+                $ambildata = mysqli_query($koneksi,"SELECT * FROM produk");
+                // search
+                if (isset($_GET["search"])){
+                    $keyword = $_GET["keyword"];
+                    $ambildata = mysqli_query($koneksi,"SELECT * FROM produk WHERE
+                                    produk_nama LIKE '%$keyword%' OR
+                                    produk_kategori LIKE '%$keyword%'");
+                }
+                while ($tampil = mysqli_fetch_array($ambildata)){
+                ?>
                 <div class="produk-box">
                     <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_1.jpg">
+                        <img src="assets/img/landing/produk/<?=$tampil['produk_foto1']?>">
                         <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
+                            <h2><?=$tampil['produk_nama']?></h2>
+                            <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?></h3>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         </div>
                     </div>
                     </a>
                 </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_2.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_3.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_4.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_5.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_6.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_7.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_8.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="produk-terlaris">
-        <div class="produk-container">
-            <h1>Produk Terlaris</h1>
-            <div class="produk-list">
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_1.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_2.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_3.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_4.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_5.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_6.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_7.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/id_8.jpg">
-                        <div class="ket">
-                            <h2>Nama Produk</h2>
-                            <h3>Rp 9,999</h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
+                <?php    
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -282,7 +130,7 @@
         </div>
     </section>
     <footer>
-        <div><h1>@2022 Olshop Indonesia</h1></div>
+        <div><h1>@2022 Sandio PetCare</h1></div>
     </footer>
 </body>
 </html>
