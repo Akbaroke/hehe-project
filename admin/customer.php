@@ -37,7 +37,7 @@
                 </thead>
                 <tbody>
                   <?php 
-                  include '../koneksi.php';
+                  include '../config/koneksi.php';
                   $no=1;
                   $data = mysqli_query($koneksi,"SELECT * FROM customer");
                   while($d = mysqli_fetch_array($data)){
