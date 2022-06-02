@@ -59,6 +59,7 @@ if(isset($_GET['alert'])){
   }
 }
 ?>
+<br>
   <div class="card">
     <div id="card-content">
       <form action="config/auth_login.php" method="post" class="form">
