@@ -57,6 +57,7 @@ if(isset($_GET['alert'])){
     }
 }
 ?>
+<br>
   <div class="card">
     <div id="card-content">
       
