@@ -4,13 +4,8 @@
 
   <section class="content-header">
     <h1>
-      customer
       <small>Tambah customer Baru</small>
     </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
-    </ol>
   </section>
 
   <section class="content">
@@ -19,10 +14,9 @@
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Tambah customer Baru</h3>
-            <a href="customer.php" class="btn btn-info btn-sm pull-right"><i class="fa fa-reply"></i> &nbsp Kembali</a> 
+            <a href="customer.php" class="btn btn-warning btn-sm pull-right"><i class="fa fa-reply"></i> &nbsp Kembali</a> 
           </div>
-          <div class="box-body">
+          <div class="card-body">
             <form action="customer_act.php" method="post">
               <div class="form-group">
                 <label>Nama</label>

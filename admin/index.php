@@ -97,12 +97,12 @@
                 <th>Username</th>
                 <td><?php echo $_SESSION['username']; ?></td>
               </tr>
-              <tr>
+              <!--tr>
                 <th>Level Hak Akses</th>
                 <td>
                   <span class="label label-success text-uppercase"><?php echo $_SESSION['status']; ?></span>
                 </td>
-              </tr>
+              </tr-->
             </table>
           </div>
         </div>
