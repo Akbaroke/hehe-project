@@ -132,7 +132,7 @@
 
          <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Produk
                 <i class="fas fa-angle-right right"></i>
@@ -189,7 +189,7 @@
           <li class="nav-header">Lainnya</li>
           <li class="nav-item">
             <a href="gantipassword" class="nav-link">
-              <i class="nav-icon far fa-cog"></i>
+              <i class="nav-icon far fa-lock"></i>
               <p>
                 Ubah password
               </p>

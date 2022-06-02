@@ -46,29 +46,9 @@
                       <td><?php echo "Rp. ".number_format($d['produk_harga']).",-"; ?></td>
                       <td><?php echo number_format($d['produk_jumlah']); ?></td>
                       <td>
-                        <center>
-                          <?php if($d['produk_foto1'] == ""){ ?>
-                            <img src="../gambar/sistem/produk.png" style="width: 80px;height: auto">
-                          <?php }else{ ?>
-                            <img src="../gambar/produk/<?php echo $d['produk_foto1'] ?>" style="width: 80px;height: auto">
-                          <?php } ?>
-                        </center>
-
-                        <center>
-                          <?php if($d['produk_foto2'] == ""){ ?>
-                            <img src="../gambar/sistem/produk.png" style="width: 80px;height: auto">
-                          <?php }else{ ?>
-                            <img src="../gambar/produk/<?php echo $d['produk_foto2'] ?>" style="width: 80px;height: auto">
-                          <?php } ?>
-                        </center>
-
-                        <center>
-                          <?php if($d['produk_foto3'] == ""){ ?>
-                            <img src="../gambar/sistem/produk.png" style="width: 80px;height: auto">
-                          <?php }else{ ?>
-                            <img src="../gambar/produk/<?php echo $d['produk_foto3'] ?>" style="width: 80px;height: auto">
-                          <?php } ?>
-                        </center>
+                        <?php echo $d['produk_foto1']; ?> <br>
+                        <?php echo $d['produk_foto2']; ?> <br>
+                        <?php echo $d['produk_foto3']; ?>  
                       </td>
                       <td>                        
                         <a class="btn btn-warning btn-sm" href="produk_edit.php?id=<?php echo $d['produk_id'] ?>"><i class="fa fa-cog"></i></a>
