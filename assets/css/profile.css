@@ -42,17 +42,22 @@ ul {
     justify-content: center;
 }
 .container-detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 50px;
     width: 1200px;
     min-height: 1000px;
     border: 1px solid #111;
+    gap: 30px;
 }
 .link-set {
     background-color: var(--warna3);
     border-radius: 20px;
     box-shadow: -5px 4px 6px #00000020;
     width: 250px;
-    min-height: 300px;
+    height: max-content;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -101,5 +106,26 @@ ul {
     text-transform: capitalize;
 }
 .pesanan-saya{
+    padding-bottom: 10px;
+}
+
+.data-profile{
+    width: 825px;
+    min-height: 400px;
+    background-color: var(--warna3);
+    border-radius: 20px;
+    box-shadow: -5px 4px 6px #00000020;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.data-header h1{
+    text-transform: capitalize;
+    font-size: 25px;
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.4);
     padding-bottom: 10px;
 }

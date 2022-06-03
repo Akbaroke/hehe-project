@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="data-profile">
-                <div class="data-header"><h1>data profile</h1></div>
+                <div class="data-header"><h1>data profil</h1></div>
                 <div class="pilih-gambar">
                     <input type="file" name="foto-profile">
                     <div>
