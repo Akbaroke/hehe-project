@@ -18,7 +18,6 @@
             <div class="link-set">
                 <div class="foto-container">
                     <div class="foto"><img src="assets/img/profile/Profile.png" alt="Foto Profile"></div>
-                    <div class="username">Username</div>
                 </div>
                 <div class="profile-saya">
                     <h2>profile saya</h2>
