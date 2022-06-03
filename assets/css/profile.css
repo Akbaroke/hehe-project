@@ -48,7 +48,7 @@ ul {
     justify-content: center;
     margin: 50px;
     width: 1200px;
-    min-height: 1000px;
+    height: max-content;
     border: 1px solid #111;
     gap: 30px;
 }
@@ -109,6 +109,12 @@ ul {
     padding-bottom: 10px;
 }
 
+.form-dataprofil{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .data-profile{
     width: 825px;
     min-height: 400px;
@@ -144,6 +150,7 @@ ul {
 .pilih-gambar input {
     color: transparent;
     margin: 0 auto;
+    margin-bottom: -20px;
     width: 115px;
 }
 .pilih-gambar input::-webkit-file-upload-button {
@@ -173,4 +180,48 @@ ul {
 }
 .pilih-gambar input:active::before {
     background: transparent; 
+}
+.pilih-gambar div{
+    margin-top: 40px;
+    width: 100%;
+}
+.pilih-gambar div p{
+    color: var(--warna4);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+.notlp-data,
+.nama-data,
+.email-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.notlp-data label,
+.nama-data label,
+.email-data label{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: var(--warna7);
+}
+.notlp-data label::after,
+.nama-data label::after,
+.email-data label::after{
+    content: " *";
+    color: var(--warna6);
+}
+.notlp-data input,
+.nama-data input,
+.email-data input{
+    background-color: var(--warna2);
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
