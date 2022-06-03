@@ -30,7 +30,7 @@
                   <?php 
                   include '../config/koneksi.php';
                   $no=1;
-                  $data = mysqli_query($koneksi,"SELECT * FROM produk,kategori where kategori_id=produk_kategori order by produk_id desc");
+                  $data = mysqli_query($koneksi,"SELECT * FROM produk,kategori where kategori_id=produk_kategori order by produk_id asc");
                   while($d = mysqli_fetch_array($data)){
                     ?>
                     <tr>

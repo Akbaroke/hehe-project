@@ -8,7 +8,7 @@ include "config/koneksi.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Sandio PetCare</title>
 
 <?php include 'layouts/header-static.php'; ?>
 
@@ -42,7 +42,7 @@ include "config/koneksi.php";
     </section>
     <section id="produk-terbaru">
         <div class="produk-container">
-            <h1>Produk Terbaru</h1>
+            <h1>Produk Tersedia</h1>
             <div class="produk-list">
                 <?php
                 $ambildata = mysqli_query($koneksi,"SELECT * FROM produk");
