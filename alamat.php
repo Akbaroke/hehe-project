@@ -21,8 +21,8 @@
                 </div>
                 <div class="profile-saya">
                     <h2>profile saya</h2>
-                    <a href="#">profil</a>
-                    <a href="#">alamat</a>
+                    <a href="profil">profil</a>
+                    <a href="alamat">alamat</a>
                     <a href="#">ubah kata sandi</a>
                     <a href="#">ubah kata sandi</a>
                     <a href="#">rekening bank</a>
@@ -33,30 +33,6 @@
                     <a href="#">riwayat pesanan</a>
                     <a href="#">chatt</a>
                 </div>
-            </div>
-            <div class="data-profile">
-                <div class="data-header"><h1>data profil</h1></div>
-                <form action="" method="post" class="form-dataprofil">
-                    <div class="pilih-gambar">
-                        <input type="file" name="foto-profile">
-                        <div>
-                            <p>Ukuran gambar: maksimal 1000kb / 1MB,</p>
-                            <p>Format gambar: JPG, JPEG, PNG</p>       
-                        </div>
-                    </div>
-                    <div class="email-data">
-                        <label>email login</label>
-                        <input type="text" nama="dataEmail" value="email@gmail.com" readonly>
-                    </div>
-                    <div class="nama-data">
-                        <label>nama lengkap</label>
-                        <input type="text" nama="dataNama" value="" required>
-                    </div>
-                    <div class="notlp-data">
-                        <label>nomor telepon</label>
-                        <input type="text" nama="dataNotlp" value="" required>
-                    </div>
-                </form>
             </div>
             <div class="data-alamat">
                 <div class="data-header"><h1>data alamat</h1></div>
