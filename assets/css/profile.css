@@ -140,3 +140,37 @@ ul {
     border: 1px solid rgba(100, 100, 100, 0.4);
     border-radius: 20px;
 }
+
+.pilih-gambar input {
+    color: transparent;
+    margin: 0 auto;
+    width: 115px;
+}
+.pilih-gambar input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.pilih-gambar input::before {
+    content: 'Pilih Gambar';
+    color: var(--warna4);
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--warna4);
+    border-radius: 50px;
+    padding: 6px 16px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    text-shadow: -5px 4px 6px #00000020;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9pt;
+}
+.pilih-gambar input:hover::before {
+    border-color: var(--warna4);
+}
+.pilih-gambar input:active {
+    outline: 0;
+}
+.pilih-gambar input:active::before {
+    background: transparent; 
+}
