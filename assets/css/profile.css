@@ -94,6 +94,7 @@ ul {
 }
 .profile-saya a,
 .pesanan-saya a{
+    width: max-content;
     color: var(--warna4);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
