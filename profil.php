@@ -46,15 +46,15 @@
                     </div>
                     <div class="email-data">
                         <label>email login</label>
-                        <input type="text" nama="dataEmail" value="email@gmail.com" readonly>
+                        <input id="form-profil" type="text" nama="dataEmail" value="email@gmail.com" readonly>
                     </div>
                     <div class="nama-data">
                         <label>nama lengkap</label>
-                        <input type="text" nama="dataNama" value="" required>
+                        <input id="form-profil" type="text" nama="dataNama" value="" required>
                     </div>
                     <div class="notlp-data">
                         <label>nomor telepon</label>
-                        <input type="text" nama="dataNotlp" value="" required>
+                        <input id="form-profil" type="text" nama="dataNotlp" value="" required>
                     </div>
                     <button class="btn-profil" type="submit">simpan</button>
                 </form>

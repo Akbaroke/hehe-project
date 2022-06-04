@@ -114,9 +114,6 @@ ul {
     gap: 25px;
     margin-bottom: 20px;
 }
-.form-dataprofil:active{
-    border: 1px solid var(--warna4);
-}
 
 .data-profile{
     width: 825px;
@@ -227,6 +224,7 @@ ul {
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    outline: none;
 }
 
 .btn-profil{
@@ -302,8 +300,10 @@ ul {
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    outline: none;
 }
 
 .provinsi-data select{
     padding: 10px;
 }
+
