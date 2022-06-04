@@ -49,10 +49,26 @@
                     <input type="text" nama="dataAlamat" value="" required>
                 </div>
                 <div class="provinsi-data">
-                    <label>profinsi</label>
+                    <label>provinsi</label>
+                    <select name="nama_provinsi" class="from-control">
+                        <option value="">--Pilih Provinsi--</option>
+                    </select>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type:'post',
+                url:'dataprovinsi.php',
+                success:function(hasil_provinsi)
+                {
+                    $("select[name=nama_provinsi]").html(hasil_provinsi);
+                }
+            })
+        });
+    </script>
     
 <?php include 'layouts/footer.php'; ?>
