@@ -245,3 +245,54 @@ ul {
     border: 2px solid var(--warna4);
     color: var(--warna4);
 }
+
+/* alamat */
+.data-alamat{
+    width: 825px;
+    min-height: 400px;
+    background-color: var(--warna3);
+    border-radius: 20px;
+    box-shadow: -5px 4px 6px #00000020;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.alamat-data,
+.nopenerima-data,
+.penerima-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.alamat-data label,
+.nopenerima-data label,
+.penerima-data label{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: var(--warna7);
+}
+
+.alamat-data label::after,
+.nopenerima-data label::after,
+.penerima-data label::after{
+    content: " *";
+    color: var(--warna6);
+}
+
+.alamat-data input,
+.nopenerima-data input,
+.penerima-data input{
+    background-color: var(--warna2);
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
