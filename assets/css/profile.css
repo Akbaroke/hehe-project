@@ -225,3 +225,23 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
 }
+
+.btn-profil{
+    background-color: var(--warna4);
+    width: 120px;
+    height: 35px;
+    border: 1px solid var(--warna4);
+    border-radius: 50px;
+    color: var(--warna3);
+    padding: 5px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -.2px;
+    margin-left: 80%;
+    cursor: pointer;
+}
+.btn-profil:hover{
+    background-color: transparent;
+    border: 2px solid var(--warna4);
+    color: var(--warna4);
+}

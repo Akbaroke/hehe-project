@@ -56,6 +56,7 @@
                         <label>nomor telepon</label>
                         <input type="text" nama="dataNotlp" value="" required>
                     </div>
+                    <button class="btn-profil" type="submit">simpan</button>
                 </form>
             </div>
     </section>
