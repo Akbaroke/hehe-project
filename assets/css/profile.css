@@ -9,6 +9,7 @@
     --warna5 : #a39fdf;
     --warna6 : #FF1E00;
     --warna7 : #111;
+    --warna8 : #64646466;
 }
 
 * {
@@ -96,14 +97,17 @@ ul {
     font-size: 16px;
     color: var(--warna7);
 }
-.profile-saya a,
-.pesanan-saya a{
+
+.profile-saya span,
+.pesanan-saya span{
     width: max-content;
-    color: var(--warna4);
+    color: var(--warna8);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-transform: capitalize;
+    cursor: pointer;
 }
+
 .pesanan-saya{
     padding-bottom: 10px;
 }
@@ -117,13 +121,13 @@ ul {
 }
 
 .data-profile{
+    display: flex;
     width: 825px;
     min-height: 400px;
     background-color: var(--warna3);
     border-radius: 20px;
     box-shadow: -5px 4px 6px #00000020;
     padding: 30px;
-    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 20px;
@@ -250,13 +254,13 @@ ul {
 
 /* alamat */
 .data-alamat{
+    display: none;
     width: 825px;
     min-height: 400px;
     background-color: var(--warna3);
     border-radius: 20px;
     box-shadow: -5px 4px 6px #00000020;
     padding: 30px;
-    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 20px;
