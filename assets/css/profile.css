@@ -2,14 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 :root {
-    --warna1 : #605CA8;
+    --warna1 : #871e5f;
     --warna2 : #F8F8F8;
     --warna3 : #fff;
     --warna4 : #EA8D30;
-    --warna5 : #a39fdf;
+    --warna5 : #a5367a;
     --warna6 : #FF1E00;
     --warna7 : #111;
-    --warna8 : #64646466;
 }
 
 * {
