@@ -68,7 +68,6 @@ if ($file == "../checkout.php") {
                 </form>
             </div>
             <div class="tom-container">
-                <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
                 <a href="../keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
                 <?php 
                     if(isset($_SESSION['customer_status'])){
@@ -91,7 +90,6 @@ if ($file == "../checkout.php") {
                 <div class="tom-container-mobile">
                     <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
                     <a href="../keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
-                    <a href="../login"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
                 </div>
                 <div class="con-close"><div class="close"><i class="fas fa-times"></i></div></div>
                 <div class="search-container-mobile">

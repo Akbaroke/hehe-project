@@ -78,7 +78,21 @@
      </div>
   </footer>
 
+<script type="text/javascript">
+    // tailwind.config.js
+const defaultTheme = require('tailwindcss/defaultTheme')
 
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  // ...
+}
+</script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/produk-konten.js"></script>
