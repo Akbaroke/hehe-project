@@ -94,15 +94,15 @@
                 <form action="" method="post" class="form-sandi">
                     <div class="passwordlama-data">
                         <label>password lama</label>
-                        <input type="text" nama="passowordLama" value="" required>
+                        <input type="password" nama="passowordLama" value="" required>
                     </div>
                     <div class="passwordbaru-data">
                         <label>password baru</label>
-                        <input type="text" nama="passowordBaru" value="" required>
+                        <input type="password" nama="passowordBaru" value="" required>
                     </div>
                     <div class="konfir-passwordbaru-data">
                         <label>konfirmasi password baru</label>
-                        <input type="text" nama="konfir-passowordBaru" value="" required>
+                        <input type="password" nama="konfir-passowordBaru" value="" required>
                     </div>
                     <button class="btn-profil" type="submit">simpan</button>
                 </form>
