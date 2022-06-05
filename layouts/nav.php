@@ -68,7 +68,7 @@
           <button class="btn" id="nav-toggle">
           <i class="fa fa-bars"></i></button>
         </li>
-        <div class="search-container">
+        <div class="search-container nav-item">
                 <form action="" method="get">
                     <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
                     <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -81,8 +81,19 @@
           </ul>
         </li-->
         <li class="nav-link">Keranjang</li>
-        <li class="nav-item">
-            <a class="btn" href="login"><i class="fa-solid fa-user"></i> Masuk</a>&emsp;
+        <li class="nav-item"><?php
+                    if(isset($_SESSION['customer_status'])){
+                    $id_customer = $_SESSION['customer_id'];
+                    $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
+                    $c = mysqli_fetch_assoc($customer);
+                    ?> 
+                    <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>&emsp;
+                     <?php
+                }else{
+                ?> 
+                 <a class="btn" href="login">Masuk</a> <?php
+                }
+                ?>
         </li>
         
       </ul>

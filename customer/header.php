@@ -58,9 +58,10 @@ if ($file == "../checkout.php") {
 <body>
 
 
-    <section id="nav">
+    
+    <!--section id="nav">
         <nav class="nav">
-            <div class="logo"><a href="../index"><img src="../assets/img/landing/LOGO.png" alt="LOGO"></a></div>
+            <div class="logo"><a href="index.php"><img src="assets/img/landing/LOGO.png" alt="LOGO"></a></div>
             <div class="search-container">
                 <form action="" method="get">
                     <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
@@ -68,19 +69,26 @@ if ($file == "../checkout.php") {
                 </form>
             </div>
             <div class="tom-container">
-                <a href="../keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
-                <?php 
+
+                <div class="tom-after" >
+                    <div>
+                    <a href="keranjang/"><i class="fa-solid fa-shopping-cart"></i></a> 
+                    </div>
+                    <div><span style="color:white;" >Keranjang</span></div>
+                </div>
+
+                <?php /*
                     if(isset($_SESSION['customer_status'])){
                     $id_customer = $_SESSION['customer_id'];
                     $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
                     $c = mysqli_fetch_assoc($customer);
                     ?> 
-                    <a class="tom-after" style="color:white;" href="../login"><?php echo $c['customer_nama']; ?></a>
+                    <a class="tom-after" style="color:white;" href="login"><?php echo $c['customer_nama']; ?></a>
                      <?php
                 }else{
                 ?> 
-                <a href="../login"><div class="tom"><i class="fa-solid fa-user"></i></div></a> <?php
-                }
+                <a href="login"><div class="tom"><i class="fa-solid fa-user"></i></div></a> <?php
+                }*/
                 ?>
             </div>
             <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
@@ -89,7 +97,8 @@ if ($file == "../checkout.php") {
             <div class="nav-mobile-container">
                 <div class="tom-container-mobile">
                     <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
-                    <a href="../keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
+                    <a href="keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
+                    <a href="#"><div class="tom"><i class="fas fa-th"></i></div></a>
                 </div>
                 <div class="con-close"><div class="close"><i class="fas fa-times"></i></div></div>
                 <div class="search-container-mobile">
@@ -100,41 +109,57 @@ if ($file == "../checkout.php") {
                 </div>
             </div>
         </div>
-    </section>
-    <script src="assets/js/nav.js"></script>
+    </section-->
 
-<?php
-include "../config/koneksi.php";
+    <style type="text/css">
+        
+ 
+ 
+    </style>
 
-session_start();
+    <nav>
+    <div class="containeru">
+      <ul class="nav-list">
+        <li class="nav-logo">
+          <div class="logo">
+            <a href="../index"><img src="../assets/img/landing/LOGO.png" width="110px" alt="LOGO"></a>
+          </div>
 
-$file = basename($_SERVER["PHP_SELF"]);
+          <button class="btn" id="nav-toggle">
+          <i class="fa fa-bars"></i></button>
+        </li>
+        <div class="search-container nav-item">
+                <form action="" method="get">
+                    <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
+                    <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        <!--li class="nav-link">Keranjang<i class="fa fa-chevron-up"></i>
+          <ul class="nav-drop">
+            <li>Portfolio</li>
+            <li>Showcase</li>
+          </ul>
+        </li-->
+        <li class="nav-link">Keranjang</li>
+        <li class="nav-item"><?php
+                    if(isset($_SESSION['customer_status'])){
+                    $id_customer = $_SESSION['customer_id'];
+                    $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
+                    $c = mysqli_fetch_assoc($customer);
+                    ?> 
+                    <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>&emsp;
+                     <?php
+                }else{
+                ?> 
+                 <a class="btn" href="../login">Masuk</a> <?php
+                }
+                ?>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
 
-if (!isset($_SESSION["customer_status"])) {
-    // halaman yg dilindungi jika customer belum login
-    $lindungi = ["customer.php", "logout.php"];
 
-    // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
-    if (in_array($file, $lindungi)) {
-        header("location:../index.php");
-    }
+    <script src="../assets/js/nav.js"></script>
 
-    if ($file == "checkout.php") {
-        header("location:../login.php?alert=login-dulu");
-    }
-} else {
-    // halaman yg tidak boleh diakses jika customer sudah login
-    $lindungi = ["../login.php", "../daftar.php"];
-
-    // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
-    if (in_array($file, $lindungi)) {
-        header("location:customer.php");
-    }
-}
-
-if ($file == "checkout.php") {
-    if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
-        header("location:keranjang.php?alert=keranjang_kosong");
-    }
-}
-?>

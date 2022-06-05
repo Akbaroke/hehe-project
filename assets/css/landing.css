@@ -287,8 +287,8 @@ ul {
 
 /* Navbar baru */
 .containeru {
-  max-width: 1000px;
-  padding: 0 4rem;
+  width: 80%;
+  
   margin: 0 auto;
 }
 
