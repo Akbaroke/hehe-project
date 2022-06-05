@@ -24,7 +24,6 @@
                     <a href="profil">profil</a>
                     <a href="alamat">alamat</a>
                     <a href="#">ubah kata sandi</a>
-                    <a href="#">ubah kata sandi</a>
                     <a href="#">rekening bank</a>
                 </div>
                 <div class="pesanan-saya">
@@ -36,30 +35,51 @@
             </div>
             <div class="data-alamat">
                 <div class="data-header"><h1>data alamat</h1></div>
-                <div class="penerima-data">
-                    <label>nama penerima</label>
-                    <input type="text" nama="dataPenerima" value="" required>
-                </div>
-                <div class="nopenerima-data">
-                    <label>nomor handphone</label>
-                    <input type="text" nama="dataNoPenerima" value="" required>
-                </div>
-                <div class="alamat-data">
-                    <label>alamat lengkap</label>
-                    <input type="text" nama="dataAlamat" value="" required>
-                </div>
-                <div class="provinsi-data">
-                    <label>provinsi</label>
-                    <select name="nama_provinsi" class="from-control">
-                        <option value="">--Pilih Provinsi--</option>
-                    </select>
-                </div>
-                <div class="kabkot-data">
-                    <label>Kab/Kota</label>
-                    <select name="nama_kabkot" class="from-control">
-                        <option value="">--Pilih Kab/Kota--</option>
-                    </select>
-                </div>
+                <form action="" method="post" class="form-alamat">
+                    <div class="penerima-data">
+                        <label>nama penerima</label>
+                        <input type="text" nama="dataPenerima" value="" required>
+                    </div>
+                    <div class="nopenerima-data">
+                        <label>nomor handphone</label>
+                        <input type="text" nama="dataNoPenerima" value="" required>
+                    </div>
+                    <div class="alamat-data">
+                        <label>alamat lengkap</label>
+                        <input type="text" nama="dataAlamat" value="" required>
+                    </div>
+                    <div class="provinsi-data">
+                        <label>provinsi</label>
+                        <select name="nama_provinsi" class="from-control">
+                            <option value="">--Pilih Provinsi--</option>
+                        </select>
+                    </div>
+                    <div class="kabkot-data">
+                        <label>Kab/Kota</label>
+                        <select name="nama_kabkot" class="from-control">
+                            <option value="">--Pilih Kab/Kota--</option>
+                        </select>
+                    </div>
+                    <div class="kecamatan-data">
+                        <label>Kecamatan</label>
+                        <select name="nama_kecamatan" class="from-control">
+                            <option value="">--Pilih Kecamatan--</option>
+                        </select>
+                    </div>
+                    <div class="kelurahan-data">
+                        <label>Kelurahan</label>
+                        <select name="nama_kelurahan" class="from-control">
+                            <option value="">--Pilih Kelurahan--</option>
+                        </select>
+                    </div>
+                    <div class="kodepos-data">
+                        <label>KodePos</label>
+                        <select name="nama_kelurahan" class="from-control">
+                            <option value="">--Pilih KodePos--</option>
+                        </select>
+                    </div>
+                    <button class="btn-profil" type="submit">simpan</button>
+                </form>
             </div>
         </div>
     </section>

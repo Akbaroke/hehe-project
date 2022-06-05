@@ -24,7 +24,6 @@
                     <a href="profil">profil</a>
                     <a href="alamat">alamat</a>
                     <a href="#">ubah kata sandi</a>
-                    <a href="#">ubah kata sandi</a>
                     <a href="#">rekening bank</a>
                 </div>
                 <div class="pesanan-saya">

@@ -108,6 +108,7 @@ ul {
     padding-bottom: 10px;
 }
 
+.form-alamat,
 .form-dataprofil{
     display: flex;
     flex-direction: column;
@@ -261,6 +262,9 @@ ul {
     gap: 20px;
 }
 
+.kodepos-data,
+.kelurahan-data-data,
+.kecamatan-data,
 .kabkot-data,
 .provinsi-data,
 .alamat-data,
@@ -273,6 +277,9 @@ ul {
     gap: 5px;
 }
 
+.kodepos-data label,
+.kelurahan-data label,
+.kecamatan-data label,
 .kabkot-data label,
 .provinsi-data label,
 .alamat-data label,
@@ -283,6 +290,9 @@ ul {
     color: var(--warna7);
 }
 
+.kodepos-data label::after,
+.kelurahan-data label::after,
+.kecamatan-data label::after,
 .kabkot-data label::after,
 .provinsi-data label::after,
 .alamat-data label::after,
@@ -292,6 +302,9 @@ ul {
     color: var(--warna6);
 }
 
+.kodepos-data select,
+.kelurahan-data select,
+.kecamatan-data select,
 .kabkot-data select,
 .provinsi-data select,
 .alamat-data input,
@@ -308,6 +321,9 @@ ul {
     outline: none;
 }
 
+.kodepos-data select,
+.kelurahan-data select,
+.kecamatan-data select,
 .kabkot-data select,
 .provinsi-data select{
     padding: 10px;
