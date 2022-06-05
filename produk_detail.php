@@ -131,38 +131,14 @@ while($d=mysqli_fetch_array($data)){
 							</p>
 							<br/>
 
-							<!-- <p><strong>Brand:</strong> E-SHOP</p> -->
-							
-							
-							<!-- <div class="product-options">
-								<ul class="size-option">
-									<li><span class="text-uppercase">Size:</span></li>
-									<li class="active"><a href="#">S</a></li>
-									<li><a href="#">XL</a></li>
-									<li><a href="#">SL</a></li>
-								</ul>
-								<ul class="color-option">
-									<li><span class="text-uppercase">Color:</span></li>
-									<li class="active"><a href="#" style="background-color:#475984;"></a></li>
-									<li><a href="#" style="background-color:#8A2454;"></a></li>
-									<li><a href="#" style="background-color:#BF6989;"></a></li>
-									<li><a href="#" style="background-color:#9A54D8;"></a></li>
-								</ul>
-							</div> -->
+						
 
 
 							<form action="">
 								<div class="product-btns">
-									<!-- <div class="qty-input">
-										<span class="text-uppercase">QTY: </span>
-										<input class="input" type="number" required="required">
-									</div> -->
-									<a class="primary-btn add-to-cart" href="keranjang_masukkan.php?id=<?php echo $d['produk_id']; ?>&redirect=detail"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</a>
-									<div class="pull-right">
-										<!-- <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button> -->
-									</div>
+	
+									<a class="primary-btn add-to-cart" href="keranjang/tambah.php?id=<?php echo $d['produk_id']; ?>&redirect=detail"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</a>
+
 								</div>
 							</form>
 

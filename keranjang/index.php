@@ -2,16 +2,6 @@
 
 <div class="container" >	
 
-<!-- BREADCRUMB -->
-<div id="breadcrumb">
-	<div class="container">
-		<ul class="breadcrumb">
-			<li><a href="index.php">Home</a></li>
-			<li class="active">Keranjang</li>
-		</ul>
-	</div>
-</div>
-<!-- /BREADCRUMB -->
 <!-- <pre>
 	<?php 
 	print_r($_SESSION); 
@@ -99,7 +89,7 @@
 												<input class="input jumlah" name="jumlah[]" id="jumlah_<?php echo $i['produk_id'] ?>" nomor="<?php echo $i['produk_id'] ?>" type="number" value="<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>" min="1">
 											</td>
 											<td class="total text-center"><strong class="primary-color total_harga" id="total_<?php echo $i['produk_id'] ?>"><?php echo "Rp. ".number_format($total) . " ,-"; ?></strong></td>
-											<td class="text-right"><a class="main-btn icon-btn" href="keranjang_hapus.php?id=<?php echo $i['produk_id']; ?>&redirect=keranjang"><i class="fa fa-close"></i></a></td>
+											<td class="text-right"><a class="main-btn icon-btn" href="hapus.php?id=<?php echo $i['produk_id']; ?>&redirect=keranjang"><i class="fa fa-close"></i></a></td>
 										</tr>
 
 										<?php

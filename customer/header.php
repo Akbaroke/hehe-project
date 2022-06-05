@@ -7,7 +7,7 @@ $file = basename($_SERVER["PHP_SELF"]);
 
 if (!isset($_SESSION["customer_status"])) {
     // halaman yg dilindungi jika customer belum login
-    $lindungi = ["../customer/customer.php", "customer/customer_logout.php"];
+    $lindungi = ["../customer/customer.php", "../keranjang/index.php", "customer/customer_logout.php"];
 
     // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
@@ -29,7 +29,7 @@ if (!isset($_SESSION["customer_status"])) {
 
 if ($file == "../checkout.php") {
     if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
-        header("location:keranjang.php?alert=keranjang_kosong");
+        header("location:../keranjang/index.php?alert=keranjang_kosong");
     }
 }
 ?>
@@ -76,7 +76,7 @@ if ($file == "../checkout.php") {
                     $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
                     $c = mysqli_fetch_assoc($customer);
                     ?> 
-                    <a class="tom-after" style="color:white;" href="login"><?php echo $c['customer_nama']; ?></a>
+                    <a class="tom-after" style="color:white;" href="../login"><?php echo $c['customer_nama']; ?></a>
                      <?php
                 }else{
                 ?> 
