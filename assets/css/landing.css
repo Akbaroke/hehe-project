@@ -602,7 +602,7 @@ ul {
     margin-bottom: 5px;
 }
 .box-footer div{
-    padding: 10px;
+    padding: 5px;
 }
 .box-footer div a{
     color: var(--warna1);
@@ -615,12 +615,14 @@ ul {
 }
 .ikut-box{
     display: flex;
+    position: relative;
     width: 100%;
     flex-direction: row;
+    gap: 4px;
 }
 .ikut-box div{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     text-align: center;
 }
 .ikut-box div:nth-child(1){
