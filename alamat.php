@@ -54,6 +54,12 @@
                         <option value="">--Pilih Provinsi--</option>
                     </select>
                 </div>
+                <div class="kabkot-data">
+                    <label>Kab/Kota</label>
+                    <select name="nama_kabkot" class="from-control">
+                        <option value="">--Pilih Kab/Kota--</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
@@ -67,7 +73,21 @@
                 {
                     $("select[name=nama_provinsi]").html(hasil_provinsi);
                 }
-            })
+            });
+
+            $("select[name=nama_provinsi]").on("change",function(){
+                //ambil id yg di klik
+                var id_provinsi_terpilih = $('option:selected', this).attr("id_provinsi");
+                $.ajax({
+                    type:'post',
+                    url:'datadistrik.php',
+                    data:'id_provinsi='+id_provinsi_terpilih,
+                    success:function(hasil_distrik)
+                    {
+                        $("select[name=nama_kabkot]").html(hasil_distrik);
+                    }
+                })
+            });
         });
     </script>
     

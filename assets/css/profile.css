@@ -260,6 +260,8 @@ ul {
     flex-wrap: nowrap;
     gap: 20px;
 }
+
+.kabkot-data,
 .provinsi-data,
 .alamat-data,
 .nopenerima-data,
@@ -271,6 +273,7 @@ ul {
     gap: 5px;
 }
 
+.kabkot-data label,
 .provinsi-data label,
 .alamat-data label,
 .nopenerima-data label,
@@ -280,6 +283,7 @@ ul {
     color: var(--warna7);
 }
 
+.kabkot-data label::after,
 .provinsi-data label::after,
 .alamat-data label::after,
 .nopenerima-data label::after,
@@ -288,6 +292,7 @@ ul {
     color: var(--warna6);
 }
 
+.kabkot-data select,
 .provinsi-data select,
 .alamat-data input,
 .nopenerima-data input,
@@ -303,6 +308,7 @@ ul {
     outline: none;
 }
 
+.kabkot-data select,
 .provinsi-data select{
     padding: 10px;
 }
