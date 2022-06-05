@@ -80,7 +80,7 @@
             <li>Showcase</li>
           </ul>
         </li-->
-        <li class="nav-link"><a class="btn" href="keranjang/"><i class="fa-solid fa-shopping-cart"></i> Keranjang</a></li>
+        <li class="nav-link"><a class="btn" href="keranjang/"><i class="fa-solid fa-shopping-cart"></i></a></li>
         <li class="nav-link"><?php
                     if(isset($_SESSION['customer_status'])){
                     $id_customer = $_SESSION['customer_id'];
