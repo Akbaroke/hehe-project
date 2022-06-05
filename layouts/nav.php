@@ -80,14 +80,20 @@
             <li>Showcase</li>
           </ul>
         </li-->
-        <li class="nav-link">Keranjang</li>
-        <li class="nav-item"><?php
+        <li class="nav-link"><a class="btn" href="keranjang/"><i class="fa-solid fa-shopping-cart"></i> Keranjang</a></li>
+        <li class="nav-link"><?php
                     if(isset($_SESSION['customer_status'])){
                     $id_customer = $_SESSION['customer_id'];
                     $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
                     $c = mysqli_fetch_assoc($customer);
                     ?> 
-                    <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>&emsp;
+                    <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>
+                    <ul class="nav-drop">
+                        <li><a href="../customer/profile">Akun Saya</li>
+                        <li><a href="keranjang">Pesanan Saya</li>
+                        <li><a href="">Ganti Password</li>
+                        <li><a href="customer/logout"> Logout</li></a>
+                    </ul>
                      <?php
                 }else{
                 ?> 

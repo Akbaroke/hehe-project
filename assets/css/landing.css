@@ -298,6 +298,7 @@ ul {
      box-shadow: 0 4px 16px #e1e5ee;
      font-family: "Poppins", sans-serif;
      background: #871e5f;
+
 }
  nav .nav-list {
      display: flex;
@@ -332,23 +333,8 @@ ul {
      position: relative;
      cursor: pointer;
 }
- nav .nav-list .nav-link i {
-     position: absolute;
-     right: 0;
-     top: 40%;
-     transition: transform 0.3s;
-}
- nav .nav-list .nav-link:after {
-     position: absolute;
-     content: "";
-     width: 0%;
-     height: 0.3em;
-     background: #EA8D30;
-     border-radius: 4px;
-     bottom: 1em;
-     left: 1.6em;
-     transition: width 0.3s;
-}
+
+
  nav .nav-list .nav-link:hover::after {
      width: 60%;
 }
@@ -356,9 +342,7 @@ ul {
      opacity: 1;
      visibility: visible;
 }
- nav .nav-list .nav-link:hover i {
-     transform: rotate(180deg);
-}
+
  nav .nav-list .nav-link .nav-drop {
      position: absolute;
      top: 4rem;
@@ -375,21 +359,32 @@ ul {
      opacity: 0;
      visibility: hidden;
      transition: 300ms ease-out;
+     z-index: 9999;
 }
  nav .nav-list .nav-link .nav-drop li {
      padding: 0.5rem 1rem;
      border-radius: 4px;
      cursor: pointer;
      transition: background 0.1s;
+     color: black;
+}
+nav .nav-link{
+    margin-left: -40px;
 }
  nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li:focus {
      background: rgba(255, 105, 180, 0.2);
+}
+
+
+
+ul li a{
+    color: black;
 }
  nav .btn {
      border: none;
      outline: transparent;
      padding: 0.5rem 1rem;
-     border-radius: 0.5rem;
+     border-radius: 50px;
      background: #EA8D30;
      color: #fff;
      font-family: inherit;
@@ -398,6 +393,7 @@ ul {
      cursor: pointer;
      transition: 0.1s;
 }
+
  nav .btn .outline {
      background: inherit;
 }
@@ -419,8 +415,8 @@ ul {
     text-align: center;
 }
 .search-container form{
-    margin: auto;
-    width: 100%;
+    margin: 0% auto;
+    width: 90%;
     display: flex;
     flex-direction: row;
 }
@@ -481,11 +477,7 @@ ul {
      nav .nav-list .nav-link {
          padding: 1.5rem 0;
     }
-     nav .nav-list .nav-link i {
-         position: absolute;
-         right: 1rem;
-         top: 1.8rem;
-    }
+
      nav .nav-list .nav-link .nav-drop {
          top: 1rem;
          box-shadow: unset;
