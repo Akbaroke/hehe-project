@@ -42,7 +42,7 @@ ul {
     left: 0;
     right: 0;
     top: 0;
-    background-color: var(--warna1);
+    background-color: #871e5f;
     overflow: hidden;
     z-index: 999999;
 }
