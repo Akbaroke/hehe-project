@@ -121,17 +121,17 @@
 
 							<div class="pull-right">
 								<input type="submit" class="main-btn" value="Update Keranjang">
-								<a class="primary-btn" href="checkout.php">Check Out</a>
+								<a class="primary-btn" href="checkout">Check Out</a>
 							</div>
 							<?php
 						}else{
 
-							echo "<br><br><br><h3><center>Keranjang Masih Kosong. Yuk <a href='index.php'>belanja</a> !</center></h3><br><br><br>";
+							echo "<br><br><br><h3><center>Keranjang Masih Kosong. Yuk <a href='../index'>belanja</a> !</center></h3><br><br><br>";
 						}
 
 
 					}else{
-						echo "<br><br><br><h3><center>Keranjang Masih Kosong. Yuk <a href='index.php'>belanja</a> !</center></h3><br><br><br>";
+						echo "<br><br><br><h3><center>Keranjang Masih Kosong. Yuk <a href='../index'>belanja</a> !</center></h3><br><br><br>";
 					}
 					?>
 

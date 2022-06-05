@@ -43,7 +43,7 @@
      <div class="container">
         <div class="row">
             <div class="footer-col">
-                <li><a href="index"><img width="50%" src="assets/img/landing/LOGO.png"></a></li>
+                <li><a href="index"><img width="50%" src="../assets/img/landing/LOGO.png"></a></li>
                 
             </div>
             <div class="footer-col">
