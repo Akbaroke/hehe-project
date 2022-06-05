@@ -218,6 +218,15 @@ ul {
     content: " *";
     color: var(--warna6);
 }
+
+.kodepos-data input,
+.kelurahan-data input,
+.kecamatan-data input,
+.kabkot-data input,
+.provinsi-data input,
+.alamat-data input,
+.nopenerima-data input,
+.penerima-data input,
 .notlp-data input,
 .nama-data input,
 .email-data input{
@@ -267,7 +276,7 @@ ul {
 }
 
 .kodepos-data,
-.kelurahan-data-data,
+.kelurahan-data,
 .kecamatan-data,
 .kabkot-data,
 .provinsi-data,
@@ -305,31 +314,3 @@ ul {
     content: " *";
     color: var(--warna6);
 }
-
-.kodepos-data select,
-.kelurahan-data select,
-.kecamatan-data select,
-.kabkot-data select,
-.provinsi-data select,
-.alamat-data input,
-.nopenerima-data input,
-.penerima-data input{
-    background-color: var(--warna2);
-    border: 1px solid rgba(100, 100, 100, 0.4);
-    border-radius: 5px;
-    width: 100%;
-    height: 40px;
-    padding: 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    outline: none;
-}
-
-.kodepos-data select,
-.kelurahan-data select,
-.kecamatan-data select,
-.kabkot-data select,
-.provinsi-data select{
-    padding: 10px;
-}
-

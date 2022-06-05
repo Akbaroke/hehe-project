@@ -75,33 +75,23 @@
                     </div>
                     <div class="provinsi-data">
                         <label>provinsi</label>
-                        <select name="nama_provinsi" class="from-control">
-                            <option value="">--Pilih Provinsi--</option>
-                        </select>
+                        <input type="text" nama="dataProvinsi" value="" required>
                     </div>
                     <div class="kabkot-data">
                         <label>Kab/Kota</label>
-                        <select name="nama_kabkot" class="from-control">
-                            <option value="">--Pilih Kab/Kota--</option>
-                        </select>
+                        <input type="text" nama="dataKabkot" value="" required>
                     </div>
                     <div class="kecamatan-data">
                         <label>Kecamatan</label>
-                        <select name="nama_kecamatan" class="from-control">
-                            <option value="">--Pilih Kecamatan--</option>
-                        </select>
+                        <input type="text" nama="dataKecamatan" value="" required>
                     </div>
                     <div class="kelurahan-data">
                         <label>Kelurahan</label>
-                        <select name="nama_kelurahan" class="from-control">
-                            <option value="">--Pilih Kelurahan--</option>
-                        </select>
+                        <input type="text" nama="dataKelurahan" value="" required>
                     </div>
                     <div class="kodepos-data">
                         <label>KodePos</label>
-                        <select name="nama_kelurahan" class="from-control">
-                            <option value="">--Pilih KodePos--</option>
-                        </select>
+                        <input type="text" nama="dataKodepos" value="" required>
                     </div>
                     <button class="btn-profil" type="submit">simpan</button>
                 </form>
