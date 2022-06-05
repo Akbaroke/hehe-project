@@ -24,13 +24,6 @@
                     <span class="hal-profil">profil</span>
                     <span class="hal-alamat">alamat</span>
                     <span class="hal-sandi">ubah kata sandi</span>
-                    <span class="hal-bank">rekening bank</span>
-                </div>
-                <div class="pesanan-saya">
-                    <h2>pesanan saya</h2>
-                    <span>status pesanan</span>
-                    <span>riwayat pesanan</span>
-                    <span>chatt</span>
                 </div>
             </div>
             <div class="data-profile">
@@ -92,6 +85,24 @@
                     <div class="kodepos-data">
                         <label>KodePos</label>
                         <input type="text" nama="dataKodepos" value="" required>
+                    </div>
+                    <button class="btn-profil" type="submit">simpan</button>
+                </form>
+            </div>
+            <div class="data-sandi">
+                <div class="data-header"><h1>Ubah Password</h1></div>
+                <form action="" method="post" class="form-sandi">
+                    <div class="passwordlama-data">
+                        <label>password lama</label>
+                        <input type="text" nama="passowordLama" value="" required>
+                    </div>
+                    <div class="passwordbaru-data">
+                        <label>password baru</label>
+                        <input type="text" nama="passowordBaru" value="" required>
+                    </div>
+                    <div class="konfir-passwordbaru-data">
+                        <label>konfirmasi password baru</label>
+                        <input type="text" nama="konfir-passowordBaru" value="" required>
                     </div>
                     <button class="btn-profil" type="submit">simpan</button>
                 </form>

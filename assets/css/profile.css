@@ -83,23 +83,21 @@ ul {
     width: 100%;
     height: 100%;
 }
-.profile-saya,
-.pesanan-saya{
+.profile-saya{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    padding-bottom: 20px;
     gap: 12px;
 }
-.profile-saya h2,
-.pesanan-saya h2{
+.profile-saya h2{
     text-transform: uppercase;
     font-size: 16px;
     color: var(--warna7);
 }
 
-.profile-saya span,
-.pesanan-saya span{
+.profile-saya span{
     width: max-content;
     color: var(--warna8);
     font-family: 'Montserrat', sans-serif;
@@ -108,10 +106,7 @@ ul {
     cursor: pointer;
 }
 
-.pesanan-saya{
-    padding-bottom: 10px;
-}
-
+.form-sandi,
 .form-alamat,
 .form-dataprofil{
     display: flex;
@@ -119,6 +114,7 @@ ul {
     gap: 25px;
     margin-bottom: 20px;
 }
+
 
 .data-profile{
     display: flex;
@@ -196,6 +192,9 @@ ul {
     font-size: 10px;
 }
 
+.konfir-passwordbaru-data,
+.passwordbaru-data,
+.passwordlama-data,
 .notlp-data,
 .nama-data,
 .email-data{
@@ -205,6 +204,10 @@ ul {
     justify-content: flex-start;
     gap: 5px;
 }
+
+.konfir-passwordbaru-data label,
+.passwordbaru-data label,
+.passwordlama-data label,
 .notlp-data label,
 .nama-data label,
 .email-data label{
@@ -212,6 +215,9 @@ ul {
     font-size: 14px;
     color: var(--warna7);
 }
+.konfir-passwordbaru-data label::after,
+.passwordbaru-data label::after,
+.passwordlama-data label::after,
 .notlp-data label::after,
 .nama-data label::after,
 .email-data label::after{
@@ -219,6 +225,9 @@ ul {
     color: var(--warna6);
 }
 
+.konfir-passwordbaru-data input,
+.passwordbaru-data input,
+.passwordlama-data input,
 .kodepos-data input,
 .kelurahan-data input,
 .kecamatan-data input,
@@ -261,7 +270,8 @@ ul {
     color: var(--warna4);
 }
 
-/* alamat */
+
+.data-sandi,
 .data-alamat{
     display: none;
     width: 825px;
