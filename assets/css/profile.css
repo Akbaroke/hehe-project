@@ -331,3 +331,21 @@ ul {
     content: " *";
     color: var(--warna6);
 }
+
+.konfir-passwordbaru-data input:focus,
+.passwordbaru-data input:focus,
+.passwordlama-data input:focus,
+.kodepos-data input:focus,
+.kelurahan-data input:focus,
+.kecamatan-data input:focus,
+.kabkot-data input:focus,
+.provinsi-data input:focus,
+.alamat-data input:focus,
+.nopenerima-data input:focus,
+.penerima-data input:focus,
+.notlp-data input:focus,
+.nama-data input:focus,
+.email-data input:focus{
+    box-shadow: -1px 1px 6px var(--warna8);
+    border: 1px solid var(--warna4);
+}
