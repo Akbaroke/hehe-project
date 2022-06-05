@@ -1,3 +1,39 @@
+<?php
+include "../config/koneksi.php";
+
+session_start();
+
+$file = basename($_SERVER["PHP_SELF"]);
+
+if (!isset($_SESSION["customer_status"])) {
+    // halaman yg dilindungi jika customer belum login
+    $lindungi = ["../customer/customer.php", "customer/customer_logout.php"];
+
+    // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
+    if (in_array($file, $lindungi)) {
+        header("location:../index.php");
+    }
+
+    if ($file == "checkout.php") {
+        header("location:../login.php?alert=login-dulu");
+    }
+} else {
+    // halaman yg tidak boleh diakses jika customer sudah login
+    $lindungi = ["../login.php", "../daftar.php"];
+
+    // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
+    if (in_array($file, $lindungi)) {
+        header("location:../customer/customer.php");
+    }
+}
+
+if ($file == "../checkout.php") {
+    if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
+        header("location:keranjang.php?alert=keranjang_kosong");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +70,19 @@
             <div class="tom-container">
                 <a href="#"><div class="tom"><i class="fa-solid fa-book"></i></div></a>
                 <a href="../keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
-                <a href="../login"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
+                <?php 
+                    if(isset($_SESSION['customer_status'])){
+                    $id_customer = $_SESSION['customer_id'];
+                    $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
+                    $c = mysqli_fetch_assoc($customer);
+                    ?> 
+                    <a class="tom-after" style="color:white;" href="login"><?php echo $c['customer_nama']; ?></a>
+                     <?php
+                }else{
+                ?> 
+                <a href="../login"><div class="tom"><i class="fa-solid fa-user"></i></div></a> <?php
+                }
+                ?>
             </div>
             <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
         </nav>

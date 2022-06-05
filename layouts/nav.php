@@ -11,7 +11,19 @@
             <div class="tom-container">
                 <a href="#"><div class="tom"><i class="fas fa-th"></i></div></a>
                 <a href="keranjang/"><div class="tom"><i class="fa-solid fa-shopping-cart"></i></div></a>
-                <a href="login"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
+                <?php 
+                    if(isset($_SESSION['customer_status'])){
+                    $id_customer = $_SESSION['customer_id'];
+                    $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id_customer'");
+                    $c = mysqli_fetch_assoc($customer);
+                    ?> 
+                    <a class="tom-after" style="color:white;" href="login"><?php echo $c['customer_nama']; ?></a>
+                     <?php
+                }else{
+                ?> 
+                <a href="login"><div class="tom"><i class="fa-solid fa-user"></i></div></a> <?php
+                }
+                ?>
             </div>
             <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
         </nav>

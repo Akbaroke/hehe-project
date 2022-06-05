@@ -84,6 +84,16 @@ ul {
     border-radius: 50%;
     box-shadow: -5px 4px 6px #00000016;
 }
+.tom-after {
+    margin: 5px;
+    width: 80px;
+    height: 40px;
+    background-color: #EA8D30;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: -5px 4px 6px #00000016;
+}
 .tom i {
     color: #ffffff;
 }
