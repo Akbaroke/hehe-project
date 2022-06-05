@@ -17,7 +17,7 @@ include "config/koneksi.php";
 <body>
 
 <?php include 'layouts/nav.php'; ?>
-
+<div class="container" >  
     <section id="banner">
         <div class="container-slide">
             <!-- Slider main container -->
@@ -44,7 +44,7 @@ include "config/koneksi.php";
         <div class="produk-container">
             <h1>Produk Tersedia</h1>
             <div class="produk-list">
-                <?php
+                <!php -- GW UBAH BAR AKWOAKWO --
                 $ambildata = mysqli_query($koneksi,"SELECT * FROM produk");
                 // search
                 if (isset($_GET["search"])){
@@ -54,18 +54,51 @@ include "config/koneksi.php";
                                     produk_kategori LIKE '%$keyword%'");
                 }
                 while ($tampil = mysqli_fetch_array($ambildata)){
+                ?-->
+
+                <?php
+                $halaman = 12;
+                $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+                $result = mysqli_query($koneksi, "SELECT * FROM produk");
+                $total = mysqli_num_rows($result);
+                $pages = ceil($total/$halaman);  
+                if(isset($_GET['urutan']) && $_GET['urutan'] == "harga"){
+                if(isset($_GET['cari'])){
+                    $cari = $_GET['cari'];
+                    $data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori and produk_nama like '%$cari%' order by produk_harga asc LIMIT $mulai, $halaman");
+                }else{
+                    $data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori order by produk_harga asc LIMIT $mulai, $halaman");
+                }
+                }else{
+
+                if(isset($_GET['cari'])){
+                    $cari = $_GET['cari'];
+                    $data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori and produk_nama like '%$cari%' order by produk_id desc LIMIT $mulai, $halaman");
+                }else{
+                    $data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori order by produk_id desc LIMIT $mulai, $halaman");
+                }
+
+                }          
+                $no =$mulai+1;
+
+                while($d = mysqli_fetch_array($data)){
                 ?>
+
+
+                
                 <div class="produk-box">
-                    <a href="#"><div>
-                        <img src="assets/img/landing/produk/<?=$tampil['produk_foto1']?>">
+                    <a href="produk_detail.php?id=<?php echo $d['produk_id'] ?>"><div>
+                        <img src="assets/img/landing/produk/<?php echo $d['produk_foto1'] ?>">
                         <div class="ket">
-                            <h2><?=$tampil['produk_nama']?></h2>
-                            <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?></h3>
+                            <h2><?php echo $d['produk_nama']; ?></h2>
+                            <h3><?php echo "Rp. ".number_format($d['produk_harga']).",-"; ?> <?php if($d['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         </div>
                     </div>
                     </a>
                 </div>
+
                 <?php    
                 }
                 ?>
