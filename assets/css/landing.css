@@ -549,12 +549,12 @@ ul li a{
 /* Produk Section */
 #produk-terbaru{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .produk-container{
-    margin: 50px;
-    width: 1131px;
-    min-height: 500px;
+    margin: 5% auto;
+    width: 90%;
+    padding: 10px;
 }
 
 .produk-container > h1{
@@ -570,12 +570,13 @@ ul li a{
     gap: 17px;
 }
 .produk-box{
+    margin: 5px;
     display: flex;
     width: 270px;
     height: 445px;
     background-color: var(--warna3);
     border-radius: 15px;
-    box-shadow: -5px 4px 6px #00000020;
+    box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
 }
 .produk-box a div{
     width: 100%;
@@ -710,7 +711,10 @@ ul li a{
         font-size: 9px;
     }
 }
-@media only screen and (max-width: 824px){
+@media only screen and (max-width: 768px){
+    .produk-box{
+        margin: 10px;
+    }
     .produk-list{
         gap: 10px;
     }

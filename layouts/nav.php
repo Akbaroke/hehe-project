@@ -68,7 +68,7 @@
           <button class="btn" id="nav-toggle">
           <i class="fa fa-bars"></i></button>
         </li>
-        <div class="search-container nav-item">
+        <div class="search-container nav-link">
                 <form action="" method="get">
                     <input type="text" name="keyword" class="kol-search" placeholder="Cari...">
                     <button type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -89,7 +89,7 @@
                     ?> 
                     <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>
                     <ul class="nav-drop">
-                        <li><a href="../customer/profile">Akun Saya</li>
+                        <li><a href="customer/customer.php">Akun Saya</li>
                         <li><a href="keranjang">Pesanan Saya</li>
                         <li><a href="">Ganti Password</li>
                         <li><a href="customer/logout"> Logout</li></a>

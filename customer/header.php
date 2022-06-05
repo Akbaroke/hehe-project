@@ -151,7 +151,7 @@ if ($file == "../checkout.php") {
                     ?> 
                     <a class="btn" href="login"><i class="fa-solid fa-user"></i> <?php echo $c['customer_nama']; ?></a>
                     <ul class="nav-drop">
-                        <li><a href="profile">Akun Saya</li>
+                        <li><a href="customer">Akun Saya</li>
                         <li><a href="../keranjang">Pesanan Saya</li>
                         <li><a href="">Ganti Password</li>
                         <li><a href="logout"> Logout</li></a>
