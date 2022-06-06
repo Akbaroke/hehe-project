@@ -76,24 +76,24 @@
             </div>
 
             <form action="#" class="add-to-cart-form">
-              <div class="product-quantity">
-                <a href="keranjang/tambah.php?id=<?php echo $d['produk_id']; ?>&redirect=detail" type="button" class="button minus">
-                  <img src="./images/icon-minus.svg" alt="Minus Icon" /></a>
+              <!--div class="product-quantity">
+                <button type="button" class="button minus">
+                  <img src="./images/icon-minus.svg" alt="Minus Icon" />
                 </button>
                 <span class="product-quantity-num">0</span>
                 <button type="button" class="button plus">
                   <img src="./images/icon-plus.svg" alt="Plus Icon" />
                 </button>
-              </div>
+              </div-->
 
-              <button
+              <a href="keranjang/tambah.php?id=<?php echo $d['produk_id']; ?>&redirect=detail"
                 type="submit"
                 aria-label="Add to cart"
                 class="button add-btn"
               >
-                <img src="./images/icon-cart.svg" alt="" />
-                Add to cart
-              </button>
+                <img src="./images/icon-cart.svg" alt="" />&emsp;
+                Tambah ke Keranjang
+              </a>
 
               <p class="form-alert"></p>
             </form>
