@@ -1,5 +1,37 @@
 <?php
 include "config/koneksi.php";
+
+session_start();
+
+$file = basename($_SERVER["PHP_SELF"]);
+
+if (!isset($_SESSION["customer_status"])) {
+    // halaman yg dilindungi jika customer belum login
+    $lindungi = ["customer/customer.php", "customer/customer_logout.php"];
+
+    // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
+    if (in_array($file, $lindungi)) {
+        header("location:index.php");
+    }
+
+    if ($file == "checkout.php") {
+        header("location:login.php?alert=login-dulu");
+    }
+} else {
+    // halaman yg tidak boleh diakses jika customer sudah login
+    $lindungi = ["login.php", "daftar.php"];
+
+    // periksa halaman, jika sudah dan mengakses halaman di atas, maka alihkan halaman
+    if (in_array($file, $lindungi)) {
+        header("location:customer/customer.php");
+    }
+}
+
+if ($file == "checkout.php") {
+    if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
+        header("location:keranjang.php?alert=keranjang_kosong");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -56,11 +88,12 @@ include "config/koneksi.php";
                 while ($tampil = mysqli_fetch_array($ambildata)){
                 ?>
                 <div class="produk-box">
-                    <a href="#"><div>
+                    <a href="produk_detail.php?id=<?php echo $tampil['produk_id'] ?>"><div>
                         <img src="assets/img/landing/produk/<?=$tampil['produk_foto1']?>">
                         <div class="ket">
                             <h2><?=$tampil['produk_nama']?></h2>
-                            <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?></h3>
+                            <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?>
+                            <?php if($tampil['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
                             <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                         </div>
                     </div>
