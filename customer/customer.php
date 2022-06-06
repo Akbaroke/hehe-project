@@ -6,7 +6,10 @@ $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id
 $data = mysqli_fetch_array($customer);
 
 ?>
-
+<?php 
+$id = $_SESSION['customer_id'];
+$customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+while($i = mysqli_fetch_array($customer)){ ?>
 	<section id="detail">
         <div class="container-detail">
             <div class="link-set">
@@ -24,10 +27,6 @@ $data = mysqli_fetch_array($customer);
             <div class="data-profile">
                 <div class="data-header"><h1>data profil</h1></div>
                 <form action="" method="post" class="form-dataprofil">
-                    <?php 
-                        $id = $_SESSION['customer_id'];
-                        $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
-                        while($i = mysqli_fetch_array($customer)){ ?>
                     <ul>
                         <li class="pilih-gambar">
                             <input type="file" name="foto-profile">
@@ -52,16 +51,15 @@ $data = mysqli_fetch_array($customer);
                             <button type="submit" name="profil" class="btn-profil">simpan</button>
                         </li>
                     </ul>
-                    <?php } ?>
                 </form>
             </div>
             <div class="data-alamat">
                 <div class="data-header"><h1>data alamat</h1></div>
                 <form action="" method="post" class="form-alamat">
-                    <?php 
-                        $id = $_SESSION['customer_id'];
-                        $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
-                        while($i = mysqli_fetch_array($customer)){ ?>
+                <?php 
+                $id = $_SESSION['customer_id'];
+                $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+                while($i = mysqli_fetch_array($customer)){ ?>
                     <ul>
                         <li class="penerima-data">
                             <label for="nama_penerima">nama penerima</label>
@@ -102,10 +100,7 @@ $data = mysqli_fetch_array($customer);
                     <?php } ?>
                 </form>
             </div>
-            <div class="data-sandi">
-                <div class="data-header"><h1>Ubah Password</h1></div>
-                <form action="" method="post" class="form-sandi">
-                    <div class="passwordlama-data">
+            <!-- <div class="passwordlama-data">
                         <label>password lama</label>
                         <input type="password" nama="passowordLama" value="" required>
                     </div>
@@ -116,15 +111,33 @@ $data = mysqli_fetch_array($customer);
                     <div class="konfir-passwordbaru-data">
                         <label>konfirmasi password baru</label>
                         <input type="password" nama="konfir-passowordBaru" value="" required>
-                    </div>
-                    <button class="btn-profil" type="submit" name="submit">simpan</button>
+                    </div> -->
+            <div class="data-sandi">
+                <div class="data-header"><h1>Ubah Password</h1></div>
+                <form action="" method="post" class="form-sandi">
+                    <ul>
+                        <li class="passwordlama-data">
+                            <label for="password_lama">password lama</label>
+                            <input type="password" name="password_lama" id="password_lama">
+                        </li>
+                        <li class="passwordbaru-data">
+                            <label for="password_baru">password lama</label>
+                            <input type="password" name="password_baru" id="password_baru">
+                        </li>
+                        <li class="konfir-passwordbaru-data">
+                            <label for="konf_password_lama">password lama</label>
+                            <input type="password" name="konf_password_baru" id="konf_password_baru">
+                        </li>
+                        <li>
+                            <button type="submit" name="sandi" class="btn-profil">simpan</button>
+                        </li>
+                    </ul>
                 </form>
             </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/customer.js"></script>
-
-
+<?php } ?>
 <?php
 
 if (isset($_POST['profil'])){
@@ -134,10 +147,10 @@ if (isset($_POST['profil'])){
     WHERE customer_id = '$id'
     ");
     echo "<script>alert('data berhasil tersimpan');</script>";
+    echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
 }
 
 if (isset($_POST['alamat'])){
-    // var_dump($_POST);
     $nama_p = htmlspecialchars($_POST["nama_penerima"]);
     $hp_p = htmlspecialchars($_POST["hp_penerima"]);
     $alamat_p = htmlspecialchars($_POST["alamat_penerima"]);
@@ -161,6 +174,32 @@ if (isset($_POST['alamat'])){
     WHERE customer_id = '$id'
     ");
     echo "<script>alert('data berhasil tersimpan');</script>";
+    echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+}
+
+if (isset($_POST['sandi'])){
+    // var_dump($_POST);
+    $pw_lama = md5(htmlspecialchars($_POST["password_lama"]));
+    $pw_baru = htmlspecialchars($_POST["password_baru"]);
+    $pw_konfbaru = htmlspecialchars($_POST["konf_password_baru"]);
+
+    $id = $_SESSION['customer_id'];
+    $customer = mysqli_query($koneksi, "SELECT * FROM customer WHERE customer_id='$id' and customer_password='$pw_lama'");
+    $cocok = mysqli_fetch_array($customer);
+    if($cocok){
+        if($pw_baru == $pw_konfbaru){
+            $simpan_pw_baru = md5($pw_konfbaru);
+            mysqli_query($koneksi, "UPDATE customer set customer_password='$simpan_pw_baru' WHERE customer_id = '$id'");
+            echo "<script>alert('Password Baru BERHASIL di simpan');</script>";
+            echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+        }else{
+            echo "<script>alert('Konfirmasi Password TIDAK SAMA !');</script>";
+            echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+        }
+    }else{
+        echo "<script>alert('Password Lama SALAH !');</script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+    }
 }
 
 ?>
