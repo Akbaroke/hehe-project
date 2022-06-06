@@ -70,10 +70,7 @@ if(isset($_GET['alert'])){
 
         <input id="user-email" placeholder="Email" class="form-content" type="email" name="email" autocomplete="on" required />
 
-
         <input id="user-email" type="number" class="form-content" required="required" name="hp" placeholder="Masukkan nomor HP/Whatsapp ..">
-
-        <input id="user-email" type="text" class="input" required="required" name="alamat" placeholder="Masukkan alamat lengkap ..">
 
         <input id="user-password" placeholder="Password" class="form-content" type="password" name="password" required />
 

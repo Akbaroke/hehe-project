@@ -1,4 +1,11 @@
-<?php include 'header.php'; ?>
+<?php 
+include 'header.php';
+
+$id = $_SESSION['customer_id'];
+$customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+$data = mysqli_fetch_array($customer);
+
+?>
 
 	<section id="detail">
         <div class="container-detail">
@@ -17,74 +24,82 @@
             <div class="data-profile">
                 <div class="data-header"><h1>data profil</h1></div>
                 <form action="" method="post" class="form-dataprofil">
-                    <div class="pilih-gambar">
-                        <input type="file" name="foto-profile">
-                        <div>
-                            <p>Ukuran gambar: maksimal 1000kb / 1MB,</p>
-                            <p>Format gambar: JPG, JPEG, PNG</p>       
-                        </div>
-                    </div>
-					<?php 
-					$id = $_SESSION['customer_id'];
-					$customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
-					while($i = mysqli_fetch_array($customer)){ ?>
-                    <div class="email-data">
-                        <label>email login</label>
-                        <input id="form-profil" type="text" nama="dataEmail" value="<?=$i['customer_email']?>" readonly>
-                    </div>
-                    <div class="nama-data">
-                        <label>nama lengkap</label>
-                        <input id="form-profil" type="text" nama="dataNama" value="<?=$i['customer_nama']?>" required>
-                    </div>
-                    <div class="notlp-data">
-                        <label>nomor telepon</label>
-                        <input id="form-profil" type="text" nama="dataNotlp" value="<?=$i['customer_hp']?>" required>
-                    </div>
-                    <button class="btn-profil" type="submit">simpan</button>
-					<?php } ?>
+                    <?php 
+                        $id = $_SESSION['customer_id'];
+                        $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+                        while($i = mysqli_fetch_array($customer)){ ?>
+                    <ul>
+                        <li class="pilih-gambar">
+                            <input type="file" name="foto-profile">
+                            <div>
+                                <p>Ukuran gambar: maksimal 1000kb / 1MB,</p>
+                                <p>Format gambar: JPG, JPEG, PNG</p>       
+                            </div>
+                        </li>
+                        <li class="email-data">
+                            <label for="customer_email">Email :</label>
+                            <input type="email" name="customer_email" id="customer_email" value="<?= $i['customer_email']; ?>" readonly>
+                        </li>
+                        <li class="nama-data">
+                            <label for="customer_nama">Nama :</label>
+                            <input type="teks" name="customer_nama" id="customer_nama" value="<?= $i['customer_nama']; ?>" required>
+                        </li>
+                        <li class="notlp-data">
+                            <label for="customer_hp">Nomor Hp :</label>
+                            <input type="teks" name="customer_hp" id="customer_hp" value="<?= $i['customer_hp']; ?>" required>
+                        </li>
+                        <li>
+                            <button type="submit" name="profil" class="btn-profil">simpan</button>
+                        </li>
+                    </ul>
+                    <?php } ?>
                 </form>
             </div>
             <div class="data-alamat">
                 <div class="data-header"><h1>data alamat</h1></div>
                 <form action="" method="post" class="form-alamat">
-					<?php 
-					$id = $_SESSION['customer_id'];
-					$customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
-					while($i = mysqli_fetch_array($customer)){ ?>
-                    <div class="penerima-data">
-                        <label>nama penerima</label>
-                        <input type="text" nama="dataPenerima" value="" required>
-                    </div>
-                    <div class="nopenerima-data">
-                        <label>nomor handphone</label>
-                        <input type="text" nama="dataNoPenerima" value="" required>
-                    </div>
-                    <div class="alamat-data">
-                        <label>alamat lengkap</label>
-                        <input type="text" nama="dataAlamat" value="<?=$i['customer_alamat']?>" required>
-                    </div>
-                    <div class="provinsi-data">
-                        <label>provinsi</label>
-                        <input type="text" nama="dataProvinsi" value="" required>
-                    </div>
-                    <div class="kabkot-data">
-                        <label>Kab/Kota</label>
-                        <input type="text" nama="dataKabkot" value="" required>
-                    </div>
-                    <div class="kecamatan-data">
-                        <label>Kecamatan</label>
-                        <input type="text" nama="dataKecamatan" value="" required>
-                    </div>
-                    <div class="kelurahan-data">
-                        <label>Kelurahan</label>
-                        <input type="text" nama="dataKelurahan" value="" required>
-                    </div>
-                    <div class="kodepos-data">
-                        <label>KodePos</label>
-                        <input type="text" nama="dataKodepos" value="" required>
-                    </div>
-                    <button class="btn-profil" type="submit">simpan</button>
-					<?php } ?>
+                    <?php 
+                        $id = $_SESSION['customer_id'];
+                        $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+                        while($i = mysqli_fetch_array($customer)){ ?>
+                    <ul>
+                        <li class="penerima-data">
+                            <label for="nama_penerima">nama penerima</label>
+                            <input type="text" name="nama_penerima" id="nama_penerima" value="<?= $i['nama_penerima']; ?>" >
+                        </li>
+                        <li class="nopenerima-data">
+                            <label for="hp_penerima">nomor hp penerima</label>
+                            <input type="text" name="hp_penerima" id="hp_penerima" value="<?= $i['hp_penerima']; ?>">
+                        </li>
+                        <li class="alamat-data">
+                            <label for="alamat_penerima">alamat penerima</label>
+                            <input type="text" name="alamat_penerima" id="alamat_penerima" value="<?= $i['alamat_penerima']; ?>" >
+                        </li>
+                        <li class="provinsi-data">
+                            <label for="provinsi_penerima">provinsi penerima</label>
+                            <input type="text" name="provinsi_penerima" id="provinsi_penerima" value="<?= $i['provinsi_penerima']; ?>" >
+                        </li>
+                        <li class="kabkot-data">
+                            <label for="kabkot_penerima">kabkot penerima</label>
+                            <input type="text" name="kabkot_penerima" id="kabkot_penerima" value="<?= $i['kabkot_penerima']; ?>" >
+                        </li>
+                        <li class="kecamatan-data">
+                            <label for="kecamatan_penerima">kecamatan penerima</label>
+                            <input type="text" name="kecamatan_penerima" id="kecamatan_penerima" value="<?= $i['kecamatan_penerima']; ?>" >
+                        </li>
+                        <li class="kelurahan-data">
+                            <label for="kelurahan_penerima">kelurahan penerima</label>
+                            <input type="text" name="kelurahan_penerima" id="kelurahan_penerima" value="<?= $i['kelurahan_penerima']; ?>" >
+                        </li>
+                        <li class="kodepos-data">
+                            <label for="kodepos_penerima">kodepos penerima</label>
+                            <input type="text" name="kodepos_penerima" id="kodepos_penerima" value="<?= $i['kodepos_penerima']; ?>" >
+                        </li>
+                        <li>
+                            <button type="submit" name="alamat" class="btn-profil">simpan</button>
+                        </li>
+                    </ul>
+                    <?php } ?>
                 </form>
             </div>
             <div class="data-sandi">
@@ -102,11 +117,53 @@
                         <label>konfirmasi password baru</label>
                         <input type="password" nama="konfir-passowordBaru" value="" required>
                     </div>
-                    <button class="btn-profil" type="submit">simpan</button>
+                    <button class="btn-profil" type="submit" name="submit">simpan</button>
                 </form>
             </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/customer.js"></script>
+
+
+<?php
+
+if (isset($_POST['profil'])){
+    mysqli_query($koneksi, "UPDATE customer set 
+    customer_nama = '$_POST[customer_nama]',
+    customer_hp = '$_POST[customer_hp]'
+    WHERE customer_id = '$id'
+    ");
+    echo "<script>alert('data berhasil tersimpan');</script>";
+}
+
+if (isset($_POST['alamat'])){
+    // var_dump($_POST);
+    $nama_p = htmlspecialchars($_POST["nama_penerima"]);
+    $hp_p = htmlspecialchars($_POST["hp_penerima"]);
+    $alamat_p = htmlspecialchars($_POST["alamat_penerima"]);
+    $provinsi_p = htmlspecialchars($_POST["provinsi_penerima"]);
+    $kabkot_p = htmlspecialchars($_POST["kabkot_penerima"]);
+    $kecamatan_p = htmlspecialchars($_POST["kecamatan_penerima"]);
+    $kelurahan_p = htmlspecialchars($_POST["kelurahan_penerima"]);
+    $kodepos_p = htmlspecialchars($_POST["kodepos_penerima"]);
+    $alamat_lengkap = $nama_p.','.$hp_p.','.$alamat_p.','.$provinsi_p.','.$kabkot_p.','.$kecamatan_p.','.$kelurahan_p.','.$kodepos_p;
+
+    mysqli_query($koneksi, "UPDATE customer set 
+    nama_penerima = '$nama_p',
+    hp_penerima = '$hp_p',
+    alamat_penerima = '$alamat_p',
+    provinsi_penerima = '$provinsi_p',
+    kabkot_penerima = '$kabkot_p',
+    kecamatan_penerima = '$kecamatan_p',
+    kelurahan_penerima = '$kelurahan_p',
+    kodepos_penerima = '$kodepos_p',
+    alamat_lengkap_penerima = '$alamat_lengkap'
+    WHERE customer_id = '$id'
+    ");
+    echo "<script>alert('data berhasil tersimpan');</script>";
+}
+
+?>
+
 
 <?php include 'footer.php'; ?>
