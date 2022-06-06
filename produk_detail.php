@@ -63,7 +63,7 @@
                 <!--span class="discount">50%</span-->
               </div>
               <div class="previous-price-wrapper">
-                <span class=""><strong>Status:</strong> 
+                <span class="">
 					<?php 
 					if($d['produk_jumlah'] == 0){
 						echo "Kosong";
