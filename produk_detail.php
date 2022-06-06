@@ -1,173 +1,120 @@
 <?php include "config/koneksi.php"; ?>
-<?php include 'layouts/header-static.php'; ?>
-<?php include 'layouts/nav.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php include 'layouts/header-static.php'; ?>
+	<title>Produk Detail</title>
+</head>
+<body>
 
-<!-- BREADCRUMB -->
-<div id="breadcrumb">
-	<div class="container">
-		<ul class="breadcrumb">
-			<li><a href="index.php">Home</a></li>
-			<li class="active">Detail Produk</li>
-		</ul>
-	</div>
-</div>
-<!-- /BREADCRUMB -->
+	<?php include 'layouts/nav.php'; ?>
 
-<?php 
-$id_produk = $_GET['id'];
-$data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori and produk_id='$id_produk'");
-while($d=mysqli_fetch_array($data)){
-	?>
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!--  Product Details -->
-				<div class="">
-					<div class="">
-						<div id="">
-
-							<div class="">
-								<?php if($d['produk_foto1'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto1'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto2'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto2'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto3'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto3'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto2'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto2'] ?>">
-								<?php } ?>
-							</div>
-
-						</div>
-						<div id="product-view">
-
-							<div class="product-view">
-								<?php if($d['produk_foto1'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto1'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto2'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto2'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto3'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto3'] ?>">
-								<?php } ?>
-							</div>
-
-							<div class="product-view">
-								<?php if($d['produk_foto2'] == ""){ ?>
-									<img src="gambar/sistem/produk.png">
-								<?php }else{ ?>
-									<img src="gambar/produk/<?php echo $d['produk_foto2'] ?>">
-								<?php } ?>
-							</div>
-
-						</div>
-					</div>
-					<div class="">
-						<div class="produK-body">
-							<div class="product-label">
-								<span><?php echo $d['kategori_nama']; ?></span>
-								<span class="sale">Kualitas Terbaik</span>
-							</div>
-							<br>
-							<h2 class="produK-name"><?php echo $d['produk_nama']; ?></h2>
-							<br>
-							<h3 class="product-price"><?php echo "Rp. ".number_format($d['produk_harga']).",-"; ?> <?php if($d['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
-							<br/>
-							<div>
-								<div class="product-rating">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o empty"></i>
-								</div>
-								<!-- <a href="#">3 Review(s) / Add Review</a> -->
-							</div>
-							<br/>
-							<p>
-								<strong>Status:</strong> 
-								<?php 
-								if($d['produk_jumlah'] == 0){
-									echo "Kosong";
-								}else{
-									echo "Tersedia";
-								} 
-								?>
-							</p>
-							<br/>
-
-						
-
-
-							<form action="">
-								<div class="product-btns">
-	
-									<a class="primary-btn add-to-cart" href="keranjang/tambah.php?id=<?php echo $d['produk_id']; ?>&redirect=detail"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</a>
-
-								</div>
-							</form>
-
-
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="product-tab">
-							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Deskripsi</a></li>
-							</ul>
-							<div class="tab-content">
-								<div id="tab1" class="tab-pane fade in active">
-									
-									<p><?php echo $d['produk_keterangan']; ?></p>
-
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!-- /Product Details -->
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
 	<?php 
+		$id_produk = $_GET['id'];
+		$data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori and produk_id='$id_produk'");
+		while($d=mysqli_fetch_array($data)){
+	?>
+	<main class="main">
+      <section class="product-wrapper">
+        <div class="container-produk">
+          <div class="product-images-wrapper">
+            <div class="preview-image-wrapper">
+              <img class="preview-image" src="assets/img/landing/produk/<?php echo $d['produk_foto1'] ?>">
+              <div class="arrows hide-for-desktop">
+                <div class="next">
+                  <img src="./images/icon-next.svg" alt="Next Icon" />
+                </div>
+                <div class="prev">
+                  <img src="./images/icon-previous.svg" alt="Previous Icon" />
+                </div>
+              </div>
+              <div class="count">
+                <p>
+                  <span class="current"></span> of
+                  <span class="total"></span>
+                </p>
+              </div>
+            </div>
+
+            <div class="thumbs-wrapper hide-for-mobile">
+              <div class="thumb-image active">
+                <img class="preview-image" src="assets/img/landing/produk/<?php echo $d['produk_foto1'] ?>">
+              </div>
+              <div class="thumb-image">
+                <img class="preview-image" src="assets/img/landing/produk/<?php echo $d['produk_foto2'] ?>">
+              </div>
+              <div class="thumb-image">
+                <img class="preview-image" src="assets/img/landing/produk/<?php echo $d['produk_foto3'] ?>">
+              </div>
+
+            </div>
+          </div>&emsp;&emsp;&emsp;&emsp;&emsp;
+          <div class="product-details-wrapper"> 
+            <h2 class="product-title"><?php echo $d['produk_nama']; ?></h2>
+            <p class="product-description">
+              
+            </p>
+
+            <div class="product-price">
+              <div class="current-price-wrapper">
+                <h2 style="color:#EA8D30;" class="current-price"><?php echo "Rp. ".number_format($d['produk_harga']).",-"; ?> <?php if($d['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h2>
+                <!--span class="discount">50%</span-->
+              </div>
+              <div class="previous-price-wrapper">
+                <span class=""><strong>Status:</strong> 
+					<?php 
+					if($d['produk_jumlah'] == 0){
+						echo "Kosong";
+					}else{
+						echo "Tersedia";
+					} 
+					?>
+				</span>
+              </div>
+            </div>
+
+            <form action="#" class="add-to-cart-form">
+              <div class="product-quantity">
+                <a href="keranjang/tambah.php?id=<?php echo $d['produk_id']; ?>&redirect=detail" type="button" class="button minus">
+                  <img src="./images/icon-minus.svg" alt="Minus Icon" /></a>
+                </button>
+                <span class="product-quantity-num">0</span>
+                <button type="button" class="button plus">
+                  <img src="./images/icon-plus.svg" alt="Plus Icon" />
+                </button>
+              </div>
+
+              <button
+                type="submit"
+                aria-label="Add to cart"
+                class="button add-btn"
+              >
+                <img src="./images/icon-cart.svg" alt="" />
+                Add to cart
+              </button>
+
+              <p class="form-alert"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- LightBox -->
+    <div class="lightbox-wrapper">
+      <div class="lightbox-content"></div>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <div style="margin:0% auto; width: 80%;" >
+    <h3>Deskripsi</h3><br>
+	<p class="deskripsi">
+              <?php echo $d['produk_keterangan']; ?>
+    </p>
+</div>
+<?php 
 }
 ?>
 
@@ -178,57 +125,37 @@ while($d=mysqli_fetch_array($data)){
 		<!-- row -->
 		<div class="row">
 			<!-- section title -->
-			<div class="col-md-12">
-				<div class="section-title">
-					<h2 class="title">Rekomendasi Produk Lainnya</h2>
-				</div>
-			</div>
+		<section id="produk-terbaru">
+        	<div class="produk-container">
+					<h2 class="title">Rekomendasi Produk Lainnya</h2><br>
 			<!-- section title -->
-
+			<div class="produk-list">
 
 			<?php           
 			$data = mysqli_query($koneksi,"select * from produk,kategori where kategori_id=produk_kategori order by rand() limit 4");
 			while($d = mysqli_fetch_array($data)){
 				?>
 
-				<div class="produk-list">
-					<div class="produk-box">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span><?php echo $d['kategori_nama'] ?></span>
-							</div>
-
-							<a href="produk_detail.php?id=<?php echo $d['produk_id'] ?>" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</a>
-
-							<?php if($d['produk_foto1'] == ""){ ?>
-								<img src="gambar/sistem/produk.png" style="height: 250px">
-							<?php }else{ ?>
-								<img src="gambar/produk/<?php echo $d['produk_foto1'] ?>" style="height: 250px">
-							<?php } ?>
-						</div>
-						<div class="product-body">
-							<h3 class="product-price"><?php echo "Rp. ".number_format($d['produk_harga']).",-"; ?> <?php if($d['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="produk_detail.php?id=<?php echo $d['produk_id'] ?>"><?php echo $d['produk_nama']; ?></a></h2>
-							<div class="product-btns">
-								<a class="main-btn btn-block text-center" href="produk_detail.php?id=<?php echo $d['produk_id'] ?>"><i class="fa fa-search"></i> Lihat</a>
-								<a class="primary-btn add-to-cart btn-block text-center" href="keranjang_masukkan.php?id=<?php echo $d['produk_id']; ?>&redirect=detail"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="produk-box">
+                    <a href="produk_detail.php?id=<?php echo $d['produk_id'] ?>"><div>
+                        <img src="assets/img/landing/produk/<?=$d['produk_foto1']?>">
+                        <div class="ket">
+                            <h2><?=$d['produk_nama']?></h2>
+                            <h3>Rp <?= number_format($d['produk_harga'],0,',','.') ?>
+                            <?php if($d['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
+                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
 				<!-- /Product Single -->
 
 				<?php 
 			}
 			?>
-
+		</div>
+		</div>
+	</section>
 
 		</div>
 		<!-- /row -->

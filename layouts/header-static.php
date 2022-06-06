@@ -15,3 +15,4 @@
     <!-- My Css -->
     <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/produk_detail.css">
