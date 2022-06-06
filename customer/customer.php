@@ -100,18 +100,6 @@ while($i = mysqli_fetch_array($customer)){ ?>
                     <?php } ?>
                 </form>
             </div>
-            <!-- <div class="passwordlama-data">
-                        <label>password lama</label>
-                        <input type="password" nama="passowordLama" value="" required>
-                    </div>
-                    <div class="passwordbaru-data">
-                        <label>password baru</label>
-                        <input type="password" nama="passowordBaru" value="" required>
-                    </div>
-                    <div class="konfir-passwordbaru-data">
-                        <label>konfirmasi password baru</label>
-                        <input type="password" nama="konfir-passowordBaru" value="" required>
-                    </div> -->
             <div class="data-sandi">
                 <div class="data-header"><h1>Ubah Password</h1></div>
                 <form action="" method="post" class="form-sandi">
