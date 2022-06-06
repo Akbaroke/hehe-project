@@ -18,7 +18,21 @@ p{
 	font-size: 1em;
 
 }
-
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+.line{
+  border-bottom: 2px solid #EA8D30;
+  width: 100px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px
+}
 button,
 .button {
   border: none;

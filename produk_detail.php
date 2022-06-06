@@ -99,6 +99,13 @@
             </form>
           </div>
         </div>
+        <div style="margin:0% auto; width: 80%;" >
+    		<h3>Deskripsi</h3>
+    		<div class="line" ></div>
+			<p class="deskripsi">
+              <?php echo $d['produk_keterangan']; ?>
+    		</p>
+		</div>
       </section>
     </main>
     <!-- LightBox -->
@@ -108,12 +115,7 @@
     <!-- Overlay -->
     <div class="overlay"></div>
 
-    <div style="margin:0% auto; width: 80%;" >
-    <h3>Deskripsi</h3><br>
-	<p class="deskripsi">
-              <?php echo $d['produk_keterangan']; ?>
-    </p>
-</div>
+    
 <?php 
 }
 ?>
@@ -126,8 +128,9 @@
 		<div class="row">
 			<!-- section title -->
 		<section id="produk-terbaru">
-        	<div class="produk-container">
-					<h2 class="title">Rekomendasi Produk Lainnya</h2><br>
+        	<div class="produk-container"><hr>
+					<h2 class="title">Rekomendasi Produk Lainnya</h2>
+					<div class="line" ></div><br>
 			<!-- section title -->
 			<div class="produk-list">
 
