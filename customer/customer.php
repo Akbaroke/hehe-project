@@ -126,8 +126,8 @@ while($i = mysqli_fetch_array($customer)){ ?>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="../assets/js/customer.js"></script>
 <?php } ?>
-<?php
 
+<?php
 function upload(){
     $namafile = $_FILES['gambar']['name'];
     $ukuranfile = $_FILES['gambar']['size'];
@@ -184,12 +184,20 @@ if (isset($_POST['profil'])){
         echo "<script>alert('data berhasil tersimpan');</script>";
         echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
     }else{
+        // menghapus file lama
+        $id = $_SESSION['customer_id'];
+        $customer = mysqli_query($koneksi,"select * from customer where customer_id='$id'");
+        while($i = mysqli_fetch_array($customer)){ 
+            $path = '../assets/img/profile/'.$i['foto_profil'];
+            unlink($path);
+        }
         mysqli_query($koneksi, "UPDATE customer set 
         customer_nama = '$customer_nama',
         customer_hp = '$customer_hp',
         foto_profil = '$gambar'
         WHERE customer_id = '$id'
         ");
+
         echo "<script>alert('data berhasil tersimpan');</script>";
         echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
     }
