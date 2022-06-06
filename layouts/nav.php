@@ -62,7 +62,7 @@
       <ul class="nav-list">
         <li class="nav-logo">
           <div class="logo">
-            <a href="index"><img src="assets/img/landing/LOGO.png" width="110px" alt="LOGO"></a>
+            <a style="position: relative;" href="index"><img src="assets/img/landing/LOGO.png" width="120px" alt="LOGO"></a>
           </div>
 
           <button class="btn" id="nav-toggle">
