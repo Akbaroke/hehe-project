@@ -26,10 +26,10 @@ while($i = mysqli_fetch_array($customer)){ ?>
             </div>
             <div class="data-profile">
                 <div class="data-header"><h1>data profil</h1></div>
-                <form action="" method="post" class="form-dataprofil">
+                <form action="" method="post" class="form-dataprofil" enctype="multipart/form-data">
                     <ul>
                         <li class="pilih-gambar">
-                            <input type="file" name="foto-profile">
+                            <input type="file" name="gambar">
                             <div>
                                 <p>Ukuran gambar: maksimal 1000kb / 1MB,</p>
                                 <p>Format gambar: JPG, JPEG, PNG</p>       
@@ -128,14 +128,71 @@ while($i = mysqli_fetch_array($customer)){ ?>
 <?php } ?>
 <?php
 
+function upload(){
+    $namafile = $_FILES['gambar']['name'];
+    $ukuranfile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpawal = $_FILES['gambar']['tmp_name'];
+
+    if( $error === 4 ){
+        echo "<script> 
+                alert('pilih gambar terlebih dahulu!');
+            </script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+        return false;
+    }
+
+    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+    $ekstensiGambar = explode('.', $namafile);
+    $ekstensiGambar = strtolower(end($ekstensiGambar));
+    if( !in_array($ekstensiGambar, $ekstensiGambarValid) ){
+        echo "<script> 
+                alert('Yang anda upload bukan gambar!');
+            </script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+        return false;
+    }
+
+    if( $ukuranfile > 1000000 ) {
+        echo "<script> 
+                alert('Ukuran gambar terlalu besar! (Max.1MB)');
+            </script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+        return false;
+    }
+
+    $namaFileBaru = uniqid();
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+    move_uploaded_file($tmpawal, '../assets/img/user/' . $namaFileBaru);
+    return $namaFileBaru;
+}
+
 if (isset($_POST['profil'])){
-    mysqli_query($koneksi, "UPDATE customer set 
-    customer_nama = '$_POST[customer_nama]',
-    customer_hp = '$_POST[customer_hp]'
-    WHERE customer_id = '$id'
-    ");
-    echo "<script>alert('data berhasil tersimpan');</script>";
-    echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+    $customer_nama = htmlspecialchars($_POST["customer_nama"]);
+    $customer_hp = htmlspecialchars($_POST["customer_hp"]);
+    $foto_profil = '';
+
+    $gambar = upload();
+    if(!$gambar){
+        mysqli_query($koneksi, "UPDATE customer set 
+        customer_nama = '$customer_nama',
+        customer_hp = '$customer_hp',
+        foto_profil = '$foto_profil'
+        WHERE customer_id = '$id'
+        ");
+        echo "<script>alert('data berhasil tersimpan');</script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+    }else{
+        mysqli_query($koneksi, "UPDATE customer set 
+        customer_nama = '$customer_nama',
+        customer_hp = '$customer_hp',
+        foto_profil = '$gambar'
+        WHERE customer_id = '$id'
+        ");
+        echo "<script>alert('data berhasil tersimpan');</script>";
+        echo "<meta http-equiv=refresh content=1;URL='customer.php'>";
+    }
 }
 
 if (isset($_POST['alamat'])){

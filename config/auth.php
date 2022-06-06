@@ -12,7 +12,7 @@ $cek_email = mysqli_query($koneksi,"select * from customer where customer_email=
 if(mysqli_num_rows($cek_email) > 0){
 	header("location:../daftar.php?alert=duplikat");
 }else{
-	mysqli_query($koneksi, "insert into customer values (NULL,'$nama','$email','$hp','$password','','','','','','','','','')");
+	mysqli_query($koneksi, "insert into customer values (NULL,'$nama','$email','$hp','$password','','','','','','','','','','')");
 	header("location:../login.php?alert=terdaftar");
 }
 ?>
