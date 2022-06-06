@@ -10,7 +10,7 @@
             </div>
             <div class="tom-container">
                 <a href="#"><div class="tom"><i class="fas fa-th"></i></div></a>
-                <a href="#"><div class="tom"><i class="fa-solid fa-cart-shopping"></i></div></a>
+                <a href="keranjang/"><div class="tom"><i class="fa-solid fa-cart-shopping"></i></div></a>
                 <a href="login.php"><div class="tom"><i class="fa-solid fa-user"></i></div></a>
             </div>
             <div class="con-ham"><div class="hamburger"><i class="fa-solid fa-bars"></i></div></div>
