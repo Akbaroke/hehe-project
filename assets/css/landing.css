@@ -323,7 +323,7 @@ ul {
 }
 .produk-container{
     margin: 50px;
-    width: 1131px;
+    width: 1200px;
     min-height: 500px;
 }
 
@@ -331,7 +331,7 @@ ul {
     font-size: 22px;
     color: var(--warna4);
     text-transform: uppercase;
-    padding: 10px 0;
+    margin-left: 2vw;
 }
 .produk-list{
     display: flex;
@@ -360,7 +360,7 @@ ul {
 }
 .produk-box .ket{
     width: 100%;
-    height: 100%;
+    height: max-content;
     padding: 20px;
 }
 .produk-box .ket h2 {
@@ -386,7 +386,7 @@ ul {
     color: var(--warna4);
     font-size: 12px;
 }
-@media only screen and (max-width: 1230px){
+@media only screen and (max-width: 1272px){
     .produk-box{
         width: 250px;
         height: 410px;
@@ -396,7 +396,7 @@ ul {
         height: 250px;
     }
 }
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1192px){
     .produk-box{
         width: 220px;
         height: 355px;
@@ -425,7 +425,7 @@ ul {
         font-size: 9px;
     }
 }
-@media only screen and (max-width: 1030px){
+@media only screen and (max-width: 1072px){
     .produk-box{
         width: 200px;
         height: 330px;
@@ -445,7 +445,7 @@ ul {
         height: 190px;
     }
 }
-@media only screen and (max-width: 910px){
+@media only screen and (max-width: 952px){
     .produk-list{
         gap: 15px;
     }
@@ -481,7 +481,10 @@ ul {
         font-size: 9px;
     }
 }
-@media only screen and (max-width: 824px){
+@media only screen and (max-width: 866px){
+    .produk-container > h1{
+        font-size: 18px;
+    }
     .produk-list{
         gap: 10px;
     }
@@ -517,7 +520,7 @@ ul {
         font-size: 7px;
     }
 }
-@media only screen and (max-width: 824px){
+@media only screen and (max-width: 771px){
     .produk-container{
         margin: 20px;
     }
@@ -526,8 +529,11 @@ ul {
     .produk-container{
         margin: 15px;
     }
+    .produk-container > h1{
+        font-size: 15px;
+    }
 }
-@media only screen and (max-width: 339px){
+@media only screen and (max-width: 361px){
     .produk-container{
         margin: 5px;
     }
