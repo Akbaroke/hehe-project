@@ -86,7 +86,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside style="background: #871e5f;" class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="../assets/img/landing/LOGO.png" alt="AdminLTE Logo" class="brand-image elevation-3" style="opacity: .8">
