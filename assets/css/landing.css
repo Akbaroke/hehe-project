@@ -340,6 +340,7 @@ ul {
     gap: 17px;
 }
 .produk-box{
+    margin: 5px;
     display: flex;
     width: 270px;
     height: 445px;
