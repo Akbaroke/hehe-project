@@ -164,7 +164,7 @@ function upload(){
     $namaFileBaru = uniqid();
     $namaFileBaru .= '.';
     $namaFileBaru .= $ekstensiGambar;
-    move_uploaded_file($tmpawal, '../assets/img/user/' . $namaFileBaru);
+    move_uploaded_file($tmpawal, '../assets/img/profile/' . $namaFileBaru);
     return $namaFileBaru;
 }
 

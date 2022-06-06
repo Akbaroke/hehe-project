@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Jun 2022 pada 08.29
+-- Waktu pembuatan: 06 Jun 2022 pada 11.10
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -54,6 +54,7 @@ CREATE TABLE `customer` (
   `customer_email` varchar(255) NOT NULL,
   `customer_hp` varchar(20) NOT NULL,
   `customer_password` varchar(255) NOT NULL,
+  `foto_profil` varchar(500) NOT NULL,
   `nama_penerima` varchar(200) NOT NULL,
   `hp_penerima` varchar(20) NOT NULL,
   `alamat_penerima` varchar(500) NOT NULL,
@@ -69,12 +70,12 @@ CREATE TABLE `customer` (
 -- Dumping data untuk tabel `customer`
 --
 
-INSERT INTO `customer` (`customer_id`, `customer_nama`, `customer_email`, `customer_hp`, `customer_password`, `nama_penerima`, `hp_penerima`, `alamat_penerima`, `provinsi_penerima`, `kabkot_penerima`, `kecamatan_penerima`, `kelurahan_penerima`, `kodepos_penerima`, `alamat_lengkap_penerima`) VALUES
-(3, 'Fajar Agung Nugroho', 'fnugroho159@gmail.com', '089637524919', '202cb962ac59075b964b07152d234b70', '', '', '', '', '', '', '', '', ''),
-(9, 'akbar', 'akbar@gmail.com', '081310725348', 'f039e5f60e85d10bf7b742e65ad931ca', '', '', '', '', '', '', '', '', ''),
-(10, 'udin123', 'udin@gmail.com', '02222', '3af4c9341e31bce1f4262a326285170d', 'joko', '05555', 'perum merpati', 'jawa barat', 'sumedang', 'suka mulya', 'sidojo', '123123', 'joko,05555,perum merpati,jawa barat,sumedang,suka mulya,sidojo,123123'),
-(14, 'ujang', 'ujang@gmail.com', '01212121', 'ed84089fcb1b864597cf6dc504859d1d', '', '', '', '', '', '', '', '', ''),
-(15, 'dadang', 'dadang@gmail.com', '01212121', 'f63f1ed278d0cb8f2ede661328779791', '', '', '', '', '', '', '', '', '');
+INSERT INTO `customer` (`customer_id`, `customer_nama`, `customer_email`, `customer_hp`, `customer_password`, `foto_profil`, `nama_penerima`, `hp_penerima`, `alamat_penerima`, `provinsi_penerima`, `kabkot_penerima`, `kecamatan_penerima`, `kelurahan_penerima`, `kodepos_penerima`, `alamat_lengkap_penerima`) VALUES
+(3, 'Fajar Agung Nugroho', 'fnugroho159@gmail.com', '089637524919', '202cb962ac59075b964b07152d234b70', '', '', '', '', '', '', '', '', '', ''),
+(9, 'akbar', 'akbar@gmail.com', '081310725348', 'f039e5f60e85d10bf7b742e65ad931ca', '', '', '', '', '', '', '', '', '', ''),
+(10, 'ujang123', 'udin@gmail.com', '02222', 'a76e1dd34e314c2646b1736e4209371b', '629dc43ec77fb.png', 'joni', '05555', 'perum merpati', 'jawa barat', 'sumedang', 'suka mulya', 'sidojo', '123123', 'joni,05555,perum merpati,jawa barat,sumedang,suka mulya,sidojo,123123'),
+(14, 'ujang', 'ujang@gmail.com', '01212121', 'ed84089fcb1b864597cf6dc504859d1d', '', '', '', '', '', '', '', '', '', ''),
+(15, 'dadang', 'dadang@gmail.com', '01212121', 'f63f1ed278d0cb8f2ede661328779791', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
