@@ -15,4 +15,3 @@
     <!-- My Css -->
     <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="stylesheet" href="assets/css/profile.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">

@@ -1,4 +1,4 @@
-    <!--section id="footer">
+    <section id="footer">
         <div class="footer-container">
             <div class="link1">
                 <div class="box-footer">
@@ -35,52 +35,7 @@
     </section>
     <footer>
         <div><h1>@2022 Sandio PetCare</h1></div>
-    </footer-->
-
-</div>
-    <!-- FOOTER -->
- <footer class="footer">
-     <div class="container">
-        <div class="row">
-            <div class="footer-col">
-                <li><a href="index"><img width="50%" src="../assets/img/landing/LOGO.png"></a></li>
-                
-            </div>
-            <div class="footer-col">
-                <h4>get help</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">shipping</a></li>
-                    <li><a href="#">returns</a></li>
-                    <li><a href="#">order status</a></li>
-                    <li><a href="#">payment options</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>online shop</h4>
-                <ul>
-                    <li><a href="#">watch</a></li>
-                    <li><a href="#">bag</a></li>
-                    <li><a href="#">shoes</a></li>
-                    <li><a href="#">dress</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Ikuti Kami</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-     </div>
-  </footer>
-
-
-    
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/produk-konten.js"></script>
 </body>
 </html>

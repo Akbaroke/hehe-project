@@ -96,9 +96,10 @@ ul {
     color: var(--warna7);
 }
 
+.logout,
 .profile-saya span{
     width: max-content;
-    color: var(--warna8);
+    color: #64646466;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-transform: capitalize;
@@ -113,7 +114,6 @@ ul {
     gap: 25px;
     margin-bottom: 20px;
 }
-
 
 .data-profile{
     display: flex;
@@ -345,6 +345,6 @@ ul {
 .notlp-data input:focus,
 .nama-data input:focus,
 .email-data input:focus{
-    box-shadow: -1px 1px 6px var(--warna8);
+    box-shadow: -1px 1px 6px #64646466;
     border: 1px solid var(--warna4);
 }
