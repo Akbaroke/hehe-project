@@ -80,6 +80,16 @@ ul {
     border-radius: 50%;
     box-shadow: -5px 4px 6px #00000016;
 }
+.tom-akwoak {
+    margin: 5px;
+
+    background-color: var(--warna3);
+
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
+}
+
 .tom i {
     color: var(--warna4);
 }
@@ -151,7 +161,10 @@ ul {
     margin-top: 7px;
     object-fit: contain;
 }
-.hamburger{display: none;}
+.hamburger{
+    display: none;
+
+}
 
 @media only screen and (max-width: 824px){
     .search-container button{
@@ -340,13 +353,13 @@ ul {
     gap: 17px;
 }
 .produk-box{
-    margin: 5px;
+    margin: 7px;
     display: flex;
     width: 270px;
     height: 445px;
     background-color: var(--warna3);
     border-radius: 15px;
-    box-shadow: -5px 4px 6px #00000020;
+    box-shadow: 0 5px 8px 0 lightgrey, 0 6px 20px 0 #EEEEEE;
 }
 .produk-box a div{
     width: 100%;
@@ -365,7 +378,7 @@ ul {
 }
 .produk-box .ket h2 {
     font-size: 16px;
-    font-style: oblique;
+
     height: 47px;
     overflow-y: hidden;
     color: var(--warna7);
@@ -374,7 +387,7 @@ ul {
 }
 .produk-box .ket h3 {
     font-size: 18px;
-    color: var(--warna6);
+    color: var(--warna4);
     margin-bottom: 10px;
 }
 .produk-box .ket div {

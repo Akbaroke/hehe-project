@@ -24,10 +24,10 @@
               <img class="preview-image" src="assets/img/landing/produk/<?php echo $d['produk_foto1'] ?>">
               <div class="arrows hide-for-desktop">
                 <div class="next">
-                  <img src="./images/icon-next.svg" alt="Next Icon" />
+                  <img src="./assets/img/icon/icon-next.svg" alt="Next Icon" />
                 </div>
                 <div class="prev">
-                  <img src="./images/icon-previous.svg" alt="Previous Icon" />
+                  <img src="./assets/img/icon/icon-previous.svg" alt="Previous Icon" />
                 </div>
               </div>
               <div class="count">
@@ -52,6 +52,7 @@
             </div>
           </div>&emsp;&emsp;&emsp;&emsp;&emsp;
           <div class="product-details-wrapper"> 
+          	<span><?php echo $d['kategori_nama']; ?></span><br>	<br>
             <h2 class="product-title"><?php echo $d['produk_nama']; ?></h2>
             <p class="product-description">
               
@@ -91,7 +92,7 @@
                 aria-label="Add to cart"
                 class="button add-btn"
               >
-                <img src="./images/icon-cart.svg" alt="" />&emsp;
+                <img src="./assets/img/icon/icon-cart.svg" alt="" />&emsp;
                 Tambah ke Keranjang
               </a>
 

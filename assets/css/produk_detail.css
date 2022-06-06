@@ -36,6 +36,12 @@ hr {
   margin-top: 5px;
   margin-bottom: 10px
 }
+span{
+  margin: auto;
+  padding:5px;
+  background-color: #EA8D30;
+  color: white;
+}
 button,
 .button {
   border: none;

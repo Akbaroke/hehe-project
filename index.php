@@ -94,7 +94,7 @@ if ($file == "checkout.php") {
                             <h2><?=$tampil['produk_nama']?></h2>
                             <h3>Rp <?= number_format($tampil['produk_harga'],0,',','.') ?>
                             <?php if($tampil['produk_jumlah'] == 0){?> <del class="product-old-price">Kosong</del> <?php } ?></h3>
-                            <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <div></div>
                         </div>
                     </div>
                     </a>
