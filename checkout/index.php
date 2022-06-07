@@ -66,7 +66,7 @@
 		if($jumlah_isi_keranjang != 0){
 
 	?>
-  	<table style="width: 100%;" id="table">
+  	<table class="table1">
 			<tr>
 				<th>Produk</th>
 				<th >Harga</th>
@@ -93,13 +93,13 @@
 					<td>
 						<a href="produk_detail.php?id=<?php echo $i['produk_id'] ?>"><?php echo $i['produk_nama'] ?></a>
 					</td>
-					<td class="text-center">
-						<?php echo "Rp. ".number_format($i['produk_harga']) . " ,-"; ?>
+					<td>
+						<?php echo "Rp. ".number_format($i['produk_harga']); ?>
 					</td>
-					<td class="qty text-center">
+					<td>
 						<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>
 					</td>
-					<td class="text-center"><strong class="primary-color total_harga" id="total_<?php echo $i['produk_id'] ?>"><?php echo "Rp. ".number_format($total) . " ,-"; ?></strong></td>
+					<td ><strong id="total_<?php echo $i['produk_id'] ?>"><?php echo "Rp. ".number_format($total); ?></strong></td>
 				</tr>
 
 				<?php
