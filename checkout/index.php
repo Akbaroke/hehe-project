@@ -1,20 +1,18 @@
 <?php include '../customer/header.php'; ?>
 
-<h2>Two Equal Columns</h2>
-
 <div class="row">
-  <div class="column" >
-  	<h2>INFORMASI PEMBELI / PENERIMA BARANG</h2>
+  <div class="column input-pembeli" >
+  	<h2>INFORMASI PEMBELI </h2>
   	<div class="form" >
-  		<form>
+  		<form action="" method="post" >
 			<div class="form-group">
 				<label>Nama</label>
-				<input type="text" class="input" name="nama" placeholder="Masukkan nama pemesan .." required="required">
+				<input type="text" id="nama" name="nama" placeholder="Masukkan nama pemesan .." required="required">
 			</div>
 
 			<div class="form-group">
 				<label>Nomor HP</label>
-				<input type="number" class="input" name="hp" placeholder="Masukkan no.hp aktif .." required="required">
+				<input type="number" id="no" name="hp" placeholder="Masukkan no.hp aktif .." required="required">
 			</div>
 
 			<div class="form-group">
@@ -39,15 +37,7 @@
 			<input name="provinsi2" id="provinsi2" value="" required="required" type="hidden"> 
 			<input name="kabupaten2" id="kabupaten2" value="" required="required" type="hidden"> 
 
-			<div id="ongkir"></div>
-
-			<div class="pull-left">
-				<a class="main-btn" href="keranjang.php">Kembali Ke Keranjang</a>
-			</div>
-
-			<div class="pull-right">
-				<input type="submit" class="primary-btn" value="Buat Pesanan">
-			</div>
+			<div id="ongkir"></div>		
 
 		
   	</div>
@@ -65,9 +55,9 @@
   	<table class="table1">
 			<tr>
 				<th>Produk</th>
-				<th >Harga</th>
-				<th >Jumlah</th>
-				<th >Total Harga</th>
+				<th>Harga</th>
+				<th>Jumlah</th>
+				<th>Total Harga</th>
 			</tr>
 
 			<?php
@@ -105,9 +95,9 @@
 
 					?>
 			<tr>
-				<th class="empty" colspan="2"></th>
-				<th>ONGKIR</th>
-				<th class="text-center"><span id="tampil_ongkir"><?php echo "Rp. 0 ,-"; ?></span></th>
+				<td class="empty" colspan="2"></td>
+				<td>ONGKIR</td>
+				<td class="text-center"><span id="tampil_ongkir"><?php echo "Rp. 0 ,-"; ?></span></td>
 			</tr>
 			<tr>
 				<th class="empty" colspan="2"></th>
@@ -132,7 +122,12 @@
 		echo "<br><br><br><h3><center>Keranjang Masih Kosong. Yuk <a href='index.php'>belanja</a> !</center></h3><br><br><br>";
 	}
 	?>
-
+	<div class="">
+		<a class="main-btn" href="keranjang.php">Kembali Ke Keranjang</a>
+	</div>
+	<div class="">
+		<input type="submit" id="submit-btn" class="primary-btn" value="Buat Pesanan">
+	</div>
 	</form>
 
   </div>

@@ -1,6 +1,7 @@
 
 .row{
-	margin: 5% auto;
+	margin: 8% auto;
+	width: 90%;
 	display: flex;
   	justify-content: space-between;
   	color: black;
@@ -11,15 +12,28 @@
 .column {
  	padding: 10px;
 }
+.input-pembeli {
+ 	width: 50%;
+}
 .column 
-input {
+#nama, #no, select {
     border: 1px solid #871e5f;
-    margin: 1% auto;
+    margin: 1%;
     border-radius: 5px;
     font-size: 1rem;
     color: #656880;
     height: 35px;
-    width: 520px;
+    width: 100%;
+    padding-left: 20px;
+}
+textarea {
+    border: 1px solid #871e5f;
+    margin: 1%;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #656880;
+    height: 135px;
+    width: 100%;
     padding-left: 20px;
 }
 input:hover{
@@ -32,6 +46,65 @@ input:hover{
 	display: flex;
   	flex-direction: column;
 }
+
+#submit-btn {
+    background: #EA8D30;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    height: 42.3px;
+    margin: 5% auto;
+    width: 30%;
+    position: relative;
+    left: 70%;
+}
+#submit-btn:hover {
+    box-shadow: 0px 1px 10px #EA8D30;
+}
+
+small{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1100px){
+	.row{
+		margin: 100px auto;
+		display: block;
+	}
+	.input-pembeli{
+		margin: 100px auto;
+		width: 90%;
+	}
+    input{
+        width: 90%;
+    }
+    #submit-btn{
+        width: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 760px){
+	.row{
+		margin: 100px auto;
+	}
+	.input-pembeli{
+		margin: 100px auto;
+		width: 100%;
+	}
+    input{
+        width: 90%;
+    }
+    #submit-btn{
+        width: 30%;
+    }
+    small{
+        font-size: 9pt;
+    }
+}
+
 form input {
   outline: none;
   height: 1.5rem;
@@ -40,12 +113,14 @@ form input {
 .table1 {
     font-family: sans-serif;
     color: #444;
-    border-collapse: collapse;
-    border: 1px solid #f2f5f7;
 }
- 
+
 .table1 tr th{
     font-weight: normal;
+}
+
+.table1 th{
+    background-color: #f2f2f2;
 }
  
 .table1, th, td {
@@ -53,16 +128,22 @@ form input {
     text-align: center;
 }
  
-.table1 tr:hover {
+/*.table1 tr:hover {
     background-color: #f5f5f5;
 }
  
 .table1 tr:nth-child(even) {
     background-color: #f2f2f2;
+}*/
+@media only screen and (max-width: 1100px){
+	.table1 {
+	    margin-top: -90px;
+	}
 }
 
 @media only screen and (max-width: 760px){
-    .row{
-    	display: block;
-    }
+    .table1 {
+	    font-size: 12px;
+	    width: 100%;
+	}
 }
