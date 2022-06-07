@@ -21,16 +21,12 @@
 				<label>Alamat Lengkap</label>
 				<textarea name="alamat" class="form-control" style="resize: none;" rows="6" placeholder="Masukkan alamat lengkap .."></textarea>
 			</div>
-
+			
 			<div class="form-group">
 				<label>Provinsi Tujuan</label>
 				<select name='provinsi' id='provinsi' class="input">
 					<option>Pilih Provinsi Tujuan</option>
-					<?php 
-					for ($i=0; $i < count($data_provinsi['rajaongkir']['results']); $i++) {
-						echo "<option value='".$data_provinsi['rajaongkir']['results'][$i]['province_id']."'>".$data_provinsi['rajaongkir']['results'][$i]['province']."</option>";
-					}
-					?>
+
 				</select>
 			</div>
 			<div class="form-group">
@@ -91,7 +87,7 @@
 
 				<tr>
 					<td>
-						<a href="produk_detail.php?id=<?php echo $i['produk_id'] ?>"><?php echo $i['produk_nama'] ?></a>
+						<?php echo $i['produk_nama'] ?>
 					</td>
 					<td>
 						<?php echo "Rp. ".number_format($i['produk_harga']); ?>
@@ -105,15 +101,9 @@
 				<?php
 				$total = 0;
 
-			}
+					}
 
-			?>
-
-			<tr>
-				<th class="empty" colspan="2"></th>
-				<th>TOTAL BERAT</th>
-				<th class="text-center"><?php echo $total_berat; ?> Gram</th>
-			</tr>
+					?>
 			<tr>
 				<th class="empty" colspan="2"></th>
 				<th>ONGKIR</th>
@@ -127,7 +117,7 @@
 
 	</table>
 
-	<input name="berat" id="berat2" value="<?php echo $total_berat ?>" type="hidden">
+			<input name="berat" id="berat2" value="<?php echo $total_berat ?>" type="hidden">
 
 			<input type="hidden" name="total_bayar" id="total_bayar" value="<?php echo $jumlah_total; ?>">
 
