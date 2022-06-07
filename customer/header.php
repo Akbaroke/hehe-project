@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="../assets/css/customer.css">
     <link rel="stylesheet" href="../assets/css/keranjang.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
 </head> 
 <body>
 
