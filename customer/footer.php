@@ -1,4 +1,4 @@
-    <section id="footer">
+    <div id="footer">
         <div class="footer-container">
             <div class="link1">
                 <div class="box-footer">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <footer>
         <div><h1>@<script>document.write(new Date().getFullYear());</script> Sandio PetCare</h1></div>
     </footer>

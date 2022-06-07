@@ -70,14 +70,14 @@ $file = basename($_SERVER["PHP_SELF"]);
 
 if (!isset($_SESSION["customer_status"])) {
     // halaman yg dilindungi jika customer belum login
-    $lindungi = ["customer.php", "logout.php"];
+    $lindungi = ["customer.php", "logout.php", "checkout/index.php"];
 
     // periksa halaman, jika belum login ke halaman di atas, maka alihkan halaman
     if (in_array($file, $lindungi)) {
-        header("location:../index.php");
+        header("location:index.php");
     }
 
-    if ($file == "checkout.php") {
+    if ($file == "index.php") {
         header("location:../login.php?alert=login-dulu");
     }
 } else {
@@ -90,9 +90,9 @@ if (!isset($_SESSION["customer_status"])) {
     }
 }
 
-if ($file == "checkout.php") {
-    if (!isset($_SESSION["keranjang"]) || count($_SESSION["keranjang"]) == 0) {
-        header("location:keranjang.php?alert=keranjang_kosong");
+if ($file == "../checkout/index.php") {
+    if (!isset($_SESSION["../keranjang"]) || count($_SESSION["keranjang"]) == 0) {
+        header("location:../keranjang/index.php?alert=keranjang_kosong");
     }
 }
 ?>

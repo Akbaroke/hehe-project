@@ -39,17 +39,17 @@ a:hover{
 }
 
 #user-email, #user-password {
-    border: 1px solid #871e5f;
+    border: 1px solid #EA8D30;
     margin: 1% auto;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 1rem;
     color: #656880;
-    height: 29px;
+    height: 35px;
     width: 520px;
     padding-left: 20px;
 }
 input:hover{
-    box-shadow: 0px 0px 3px #871e5f;
+    box-shadow: 0px 0px 3px #EA8D30;
 }
 
 
@@ -59,7 +59,7 @@ input:hover{
 }
 
 #submit-btn {
-    background: #871e5f;
+    background: #EA8D30;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -70,7 +70,7 @@ input:hover{
     width: 542px;
 }
 #submit-btn:hover {
-    box-shadow: 0px 1px 10px #871e5f;
+    box-shadow: 0px 1px 10px #EA8D30;
 }
 
 small{
@@ -84,10 +84,10 @@ small{
         margin-bottom: 40px;
     }
     #user-email, #user-password{
-        width: 90%;
+        width: 60%;
     }
     #submit-btn{
-        width: 93%;
+        width: 60%;
     }
 
 }
