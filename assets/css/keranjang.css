@@ -3,7 +3,14 @@
 /* Global settings */
 /* Global "table" column settings */
 
+input[type=number] {
+    height: 30px;
+}
 
+input[type=number]:hover::-webkit-inner-spin-button {  
+    width: 14px;
+    height: 30px;
+}
 .btn-update{
 	float: right;
 	 border: 0;

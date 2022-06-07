@@ -73,9 +73,10 @@
     </div>
 
     <div class="product-quantity">
-    <input class="input jumlah" name="jumlah[]" id="jumlah_<?php echo $i['produk_id'] ?>" nomor="<?php echo $i['produk_id'] ?>" type="number" value="<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>" min="1">
+    <input class="quantity" name="jumlah[]" id="jumlah_<?php echo $i['produk_id'] ?>" nomor="<?php echo $i['produk_id'] ?>" type="number" value="<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>" min="1">
     <input class="harga" id="harga_<?php echo $i['produk_id'] ?>" type="hidden" value="<?php echo $i['produk_harga']; ?>">
 	<input name="produk[]" value="<?php echo $i['produk_id'] ?>" type="hidden">
+	
     </div>
     <div class="product-removal">
 
