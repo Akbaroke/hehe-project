@@ -65,9 +65,11 @@
     <div class="product-details">
       <div class="product-title">
       	<h3><?php echo $i['produk_nama'] ?></h3></div>
-      	<p class="product-description"><?php echo substr($i['produk_keterangan'], 0,200), "(selengkapnya lihat produk)"; ?></p>
+      	<p style="color:grey;" class="product-description"><?php echo substr($i['produk_keterangan'], 0,200), "(selengkapnya lihat produk)"; ?></p>
     </div>
-    <div class="product-price"><?php echo "Rp. ".number_format($i['produk_harga']); ?></div>
+    <div class="product-price"><?= number_format($i['produk_harga'],0,',','.') ?>
+    	
+    </div>
 
     <div class="product-quantity">
     <input class="input jumlah" name="jumlah[]" id="jumlah_<?php echo $i['produk_id'] ?>" nomor="<?php echo $i['produk_id'] ?>" type="number" value="<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>" min="1">
@@ -79,7 +81,7 @@
         <a class="remove-product" href="hapus.php?id=<?php echo $i['produk_id']; ?>&redirect=keranjang">Hapus</a>
 
     </div>
-    <div class="product-line-price"><strong class="primary-color total_harga" id="total_<?php echo $i['produk_id'] ?>"><?php echo "Rp. ".number_format($total); ?></strong></td>
+    <div class="product-line-price"><strong class="primary-color total_harga" id="total_<?php echo $i['produk_id'] ?>"><?= number_format($i['produk_harga'],0,',','.') ?></strong></td>
 		</div>
   </div>
 <?php
@@ -91,12 +93,12 @@ $total = 0;
     
     <div class="totals-item totals-item-total">
       <label>Total</label>
-      <div class="totals-value" id="cart-total"><?php echo "Rp. ".number_format($jumlah_total); ?></div>
+      <div class="totals-value" id="cart-total"><?php echo number_format($jumlah_total); ?></div>
       <input type="submit" class="btn-update" value="Update Total">
     </div>
   </div>
 
-<a href="checkout.php" class="checkout">Checkout</a>
+<a href="../checkout" class="checkout">Checkout</a>
 
 
 
