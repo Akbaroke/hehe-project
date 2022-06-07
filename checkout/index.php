@@ -123,9 +123,6 @@
 	}
 	?>
 	<div class="">
-		<a class="main-btn" href="keranjang.php">Kembali Ke Keranjang</a>
-	</div>
-	<div class="">
 		<input type="submit" id="submit-btn" class="primary-btn" value="Buat Pesanan">
 	</div>
 	</form>
