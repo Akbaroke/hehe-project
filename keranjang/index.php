@@ -67,7 +67,7 @@
       <div class="product-title">
       	<h3><a style="color: black;" href="../produk_detail.php?id=<?php echo $i['produk_id'] ?>"><?php echo $i['produk_nama'] ?></a></h3>
       	</div>
-      	<p style="color:grey;" class="product-description"><?php echo substr($i['produk_keterangan'], 0,200), "(selengkapnya lihat produk)"; ?></p>
+      	<p style="color:grey;" class="product-description"><?php echo substr($i['produk_keterangan'], 0,200), "<br>", "(selengkapnya lihat produk)"; ?></p>
     </div>
     <div class="product-price"><?= number_format($i['produk_harga'],0,',','.') ?>
     	

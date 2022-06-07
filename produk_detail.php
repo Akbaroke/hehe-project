@@ -52,7 +52,7 @@
             </div>
           </div>&emsp;&emsp;&emsp;&emsp;&emsp;
           <div class="product-details-wrapper"> 
-          	<span class="discount" ><?php echo $d['kategori_nama']; ?></span><br>	<br>
+          	<span class="discount kategori" ><?php echo $d['kategori_nama']; ?></span><br>	<br>
             <h2 class="product-title"><?php echo $d['produk_nama']; ?></h2>
             <p class="product-description">
               
@@ -65,7 +65,7 @@
                 <!--span class="discount">50%</span-->
               </div>
               <div class="previous-price-wrapper">
-                <span class="">
+                <span class="kategori">
 					<?php 
 					if($d['produk_jumlah'] == 0){
 						echo "Kosong";
@@ -104,7 +104,7 @@
         <div class="deskripsi" >
     		<h3>Deskripsi</h3>
     		<div class="line" ></div>
-			<p class="">
+			<p >
               <?php echo $d['produk_keterangan']; ?>
     		</p>
 		</div>
