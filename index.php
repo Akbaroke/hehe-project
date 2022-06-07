@@ -14,7 +14,7 @@ if (!isset($_SESSION["customer_status"])) {
         header("location:index.php");
     }
 
-    if ($file == "checkout.php") {
+    if ($file == "checkout/index.php") {
         header("location:login.php?alert=login-dulu");
     }
 } else {

@@ -100,11 +100,11 @@ $total = 0;
     <div class="totals-item totals-item-total">
       <label>Total</label>
       <div class="totals-value" id="cart-total"><?php echo number_format($jumlah_total); ?></div>
-      <input type="submit" class="btn-update" value="Update Total">
+      
     </div>
   </div>
-
-<a href="../checkout" class="checkout">Checkout</a>
+<input type="submit" class="btn-update" value="Update Total">
+<button id="submit-btn"><a style="color:white;" href="../checkout" >Checkout</a></button>
 
 
 
