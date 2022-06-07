@@ -64,7 +64,8 @@
     </div>
     <div class="product-details">
       <div class="product-title">
-      	<h3><?php echo $i['produk_nama'] ?></h3></div>
+      	<h3><a style="color: black;" href="../produk_detail.php?id=<?php echo $i['produk_id'] ?>"><?php echo $i['produk_nama'] ?></a></h3>
+      	</div>
       	<p style="color:grey;" class="product-description"><?php echo substr($i['produk_keterangan'], 0,200), "(selengkapnya lihat produk)"; ?></p>
     </div>
     <div class="product-price"><?= number_format($i['produk_harga'],0,',','.') ?>
