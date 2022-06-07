@@ -18,8 +18,9 @@
     <label class="product-details">Product</label>
     <label class="product-price">Harga</label>
     <label class="product-quantity">Jumlah</label>
-    <label class="product-removal">Remove</label>
+    
     <label class="product-line-price">Total</label>
+    <label class="product-removal">Remove</label>
   </div>
 
 
@@ -76,15 +77,18 @@
     <input class="quantity" name="jumlah[]" id="jumlah_<?php echo $i['produk_id'] ?>" nomor="<?php echo $i['produk_id'] ?>" type="number" value="<?php echo $_SESSION['keranjang'][$a]['jumlah']; ?>" min="1">
     <input class="harga" id="harga_<?php echo $i['produk_id'] ?>" type="hidden" value="<?php echo $i['produk_harga']; ?>">
 	<input name="produk[]" value="<?php echo $i['produk_id'] ?>" type="hidden">
-	
-    </div>
-    <div class="product-removal">
-
-        <a class="remove-product" href="hapus.php?id=<?php echo $i['produk_id']; ?>&redirect=keranjang">Hapus</a>
 
     </div>
-    <div class="product-line-price"><strong class="primary-color total_harga" id="total_<?php echo $i['produk_id'] ?>"><?= number_format($i['produk_harga'],0,',','.') ?></strong></td>
+    
+    	<div class="product-line-price">
+    	<strong class="primary-color " id="total_<?php echo $i['produk_id'] ?>"><?= number_format($i['produk_harga'],0,',','.') ?></strong>
+
 		</div>
+		<div class="product-removal">
+&emsp;
+        <a class="remove-product" href="hapus.php?id=<?php echo $i['produk_id']; ?>&redirect=keranjang"><i class="fa fa-close"></i></a>
+
+    	</div>
   </div>
 <?php
 $total = 0;
